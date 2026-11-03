@@ -22,8 +22,8 @@ hotelRoom: "images/room_at_crescent_hotel.jpeg",
 };
 
 const links = {
-  facebook: "",
-  instagram: "",
+  facebook: "https://www.facebook.com/IVCoC/",
+  instagram: "https://www.instagram.com/indianvalley_chamber/",
   hotel:
   "https://app.mews.com/distributor/4b6eaa0c-7e6c-48c5-a8c3-b42d009d25a8",
   alyssaEmail: "",
@@ -106,12 +106,24 @@ function OptionalLink({ href, children }) {
     </a>
   );
 }
-
 function SocialLinks() {
   return (
     <div className="journal-socials">
-      <OptionalLink href={links.facebook}>Facebook ↗</OptionalLink>
-      <OptionalLink href={links.instagram}>Instagram ↗</OptionalLink>
+      {links.facebook && (
+        <SocialIcon
+          platform="facebook"
+          href={links.facebook}
+          label="Visit Indian Valley Chamber of Commerce on Facebook"
+        />
+      )}
+
+      {links.instagram && (
+        <SocialIcon
+          platform="instagram"
+          href={links.instagram}
+          label="Visit Indian Valley Chamber of Commerce on Instagram"
+        />
+      )}
     </div>
   );
 }
@@ -710,7 +722,7 @@ Nature, whimsy, and a little magic come together at All the Rage: light-up mushr
     <p>
       Custom wire-wrapped jewelry and other oddities,
       bringing crystals and materials from nature into
-      individually crafted pieces.
+      individually crafted pieces. An all-new collection is in the works for this year’s Artisan Shoppe.
     </p>
 
     <SocialIcon
@@ -728,7 +740,7 @@ Nature, whimsy, and a little magic come together at All the Rage: light-up mushr
                 leading up to opening and throughout the Artisan Shoppe
                 season.
               </p>
-              <SocialLinks />
+            <SocialLinks />
             </div>
           </section>
 

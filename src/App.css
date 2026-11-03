@@ -1383,3 +1383,12 @@ img[src*="gemstone_geenie"] {
     0 4px 12px rgb(47 43 35 / 7%),
     0 18px 40px rgb(47 43 35 / 12%);
 }
+
+.journal-socials {
+  align-items: center;
+  gap: 12px;
+}
+
+.journal-socials .social-icon {
+  margin: 0;
+}
