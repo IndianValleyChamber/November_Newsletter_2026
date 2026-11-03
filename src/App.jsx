@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import GeneseeSlideshow from "./GeneseeSlideshow";
 import UmcSlideshow from "./UmcSlideshow";
+
+import EventsCalendar from "./EventsCalendar";
 
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
@@ -154,6 +156,19 @@ function SocialIcon({ platform, href, label }) {
 }
 export default function App() {
   const [shareMessage, setShareMessage] = useState("");
+  const [showCalendar, setShowCalendar] = useState(
+  () => window.location.hash === "#calendar"
+);
+
+useEffect(() => {
+  function updatePage() {
+    setShowCalendar(window.location.hash === "#calendar");
+    window.scrollTo(0, 0);
+  }
+
+  window.addEventListener("hashchange", updatePage);
+  return () => window.removeEventListener("hashchange", updatePage);
+}, []);
 
   async function shareArticle() {
     const shareData = {
@@ -176,6 +191,10 @@ export default function App() {
       }
     }
   }
+
+  if (showCalendar) {
+  return <EventsCalendar />;
+}
 
   return (
     <>
@@ -202,8 +221,11 @@ export default function App() {
         </a>
 
         <a className="navbar__link" href="#journal">
-          November Journal
+          November 2026 Newsletter
         </a>
+        <a className="journal-link" href="#calendar">
+  Calendar of Events ↗
+</a>
       </header>
 
       <main id="journal">

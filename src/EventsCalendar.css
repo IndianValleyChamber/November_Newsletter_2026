@@ -1,0 +1,179 @@
+.events-page {
+  width: min(1400px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 72px 0;
+}
+
+.events-heading {
+  margin-bottom: 48px;
+}
+
+.events-heading h1 {
+  margin-bottom: 20px;
+  font-size: clamp(44px, 6vw, 78px);
+}
+
+.events-heading > p:not(.eyebrow) {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.events-hint {
+  display: block;
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.month-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  border-left: 1px solid var(--line);
+}
+
+.month-calendar__weekday {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--line);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.month-calendar__day {
+  min-width: 0;
+  min-height: 100px;
+  padding: 14px 12px 20px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.month-calendar__day > time {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.calendar-event + .calendar-event {
+  margin-top: 16px;
+}
+
+.calendar-event summary {
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.6;
+  list-style: none;
+}
+
+.calendar-event summary::-webkit-details-marker {
+  display: none;
+}
+
+.calendar-event summary::after {
+  content: " +";
+  color: var(--muted);
+}
+
+.calendar-event[open] summary::after {
+  content: " −";
+}
+
+.calendar-event summary:focus-visible {
+  outline: 1px solid var(--ink);
+  outline-offset: 5px;
+}
+
+.calendar-event__body {
+  margin-top: 18px;
+  font-size: 11px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.calendar-event__body p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+.calendar-event a,
+.events-looking-ahead a {
+  text-underline-offset: 4px;
+}
+
+.calendar-event__actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.calendar-event__actions button {
+  width: fit-content;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.events-mobile {
+  display: none;
+}
+
+.events-looking-ahead {
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.events-looking-ahead h2 {
+  font-family: "Bodoni Moda SC", serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.events-looking-ahead p,
+.events-looking-ahead a {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .events-page {
+    width: calc(100% - 40px);
+    padding-top: 48px;
+  }
+
+  .month-calendar {
+    display: none;
+  }
+
+  .events-mobile {
+    display: block;
+  }
+
+  .events-mobile__day {
+    display: grid;
+    grid-template-columns: 65px minmax(0, 1fr);
+    gap: 20px;
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .events-mobile__day > time {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .events-mobile summary {
+    font-size: 15px;
+  }
+
+  .events-mobile .calendar-event__body {
+    font-size: 13px;
+  }
+}
