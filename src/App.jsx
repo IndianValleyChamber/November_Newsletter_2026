@@ -346,21 +346,14 @@ export default function App() {
             </div>
           </section>
 
-<section className="journal-width">
-  <div className="hotel-image-pair">
+<section className="hotel-feature journal-width">
+  <div className="hotel-feature__left">
     <Media
       src={media.hotelOutside}
       alt="The exterior of The Crescent Hotel in Crescent Mills"
     />
 
-    <Media
-      src={media.hotelRoom}
-      alt="A newly remodeled guest room at The Crescent Hotel"
-    />
-  </div>
-
-  <div className="editorial-row">
-    <div className="editorial-row__copy">
+    <div className="hotel-feature__copy">
       <p>
         In Crescent Mills, The Crescent Hotel is welcoming
         guests into its newly remodeled upstairs rooms.
@@ -376,6 +369,11 @@ export default function App() {
       </OptionalLink>
     </Sidebar>
   </div>
+
+  <Media
+    src={media.hotelRoom}
+    alt="A newly remodeled guest room at The Crescent Hotel"
+  />
 </section>
 
           <section className="editorial-row journal-width">

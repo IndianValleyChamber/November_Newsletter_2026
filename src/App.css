@@ -682,3 +682,42 @@ video.journal-media {
     gap: 18px;
   }
 }
+
+.hotel-feature {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(18px, 2vw, 28px);
+  padding-bottom: clamp(40px, 5vw, 76px);
+}
+
+.hotel-feature__left {
+  min-width: 0;
+}
+
+.hotel-feature img.journal-media {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+}
+
+.hotel-feature__copy {
+  padding: 28px 0;
+}
+
+.hotel-feature__copy p {
+  margin: 0;
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.85;
+}
+
+.hotel-feature .journal-sidebar {
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .hotel-feature {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}
