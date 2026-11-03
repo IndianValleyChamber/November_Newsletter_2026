@@ -1043,3 +1043,29 @@ video.journal-media {
 .umc-slideshow figcaption {
   margin-top: 12px;
 }
+
+.journal-footer {
+  background-color: #302823;
+  color: #fefefc;
+  border-top: none;
+}
+
+.journal-footer p,
+.journal-footer a,
+.journal-footer .journal-link,
+.journal-footer .social-icon {
+  color: #fefefc;
+}
+
+.journal-footer a:hover {
+  opacity: 0.75;
+}
+
+.journal-footer a:focus-visible {
+  outline-color: #fefefc;
+}
+
+.journal-footer__logo-placeholder {
+  color: #fefefc;
+  border-color: rgb(254 254 252 / 35%);
+}

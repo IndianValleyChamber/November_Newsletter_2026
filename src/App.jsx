@@ -16,7 +16,7 @@ const media = {
   trunkOrTreat: "",
   allTheRage: "images/jamie_rainbow.png",
   gemstoneGenie: "images/gemstone_geenie.jpg",
-  chamberLogo: "",
+  chamberLogo: "images/chamber_round_logo.png",  
   hotelOutside: "images/crescent_hotel_outside.jpeg",
 hotelRoom: "images/room_at_crescent_hotel.jpeg",
 };
