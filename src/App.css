@@ -1207,3 +1207,44 @@ video.journal-media {
     animation: none;
   }
 }
+
+/* Keep the UMC text and video together on desktop. */
+.umc-story {
+  width: min(860px, calc(100% - 80px));
+  grid-template-columns: minmax(0, 470px) minmax(0, 300px);
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.umc-story > .portrait-story__copy {
+  width: 100%;
+  max-width: none;
+}
+
+.umc-story > .umc-slideshow {
+  width: 100%;
+  max-width: 300px;
+  justify-self: start;
+}
+
+/* Keep the existing stacked mobile arrangement. */
+@media (max-width: 760px) {
+  .umc-story {
+    width: calc(100% - 40px);
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .umc-story > .umc-slideshow {
+    width: min(100%, 260px, 48svh);
+    justify-self: center;
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .umc-story > .portrait-story__copy {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}

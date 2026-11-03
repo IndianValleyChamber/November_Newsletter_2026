@@ -405,7 +405,7 @@ useEffect(() => {
   </figure>
 </section>
 
-          <section className="portrait-story portrait-story--reverse journal-width">
+         <section className="portrait-story portrait-story--reverse journal-width umc-story">
         <UmcSlideshow />
             <div className="portrait-story__copy">
               <p>
