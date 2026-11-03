@@ -617,3 +617,48 @@ video.journal-media {
     margin-top: 36px;
   }
 }
+
+.makers-grid {
+  align-items: start;
+}
+
+.maker--portrait .journal-media,
+.maker--landscape .journal-media {
+  height: auto;
+  aspect-ratio: auto;
+}
+
+.maker--portrait .journal-media--placeholder {
+  aspect-ratio: 4 / 5;
+}
+
+.maker--landscape .journal-media--placeholder {
+  aspect-ratio: 16 / 9;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-top: 14px;
+  margin-left: -10px;
+  color: var(--ink);
+  transition: opacity 180ms ease;
+}
+
+.social-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.social-icon:hover {
+  opacity: 0.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-icon {
+    transition: none;
+  }
+}

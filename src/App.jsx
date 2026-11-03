@@ -10,8 +10,8 @@ const media = {
   waystation: "",
   hotel: "",
   trunkOrTreat: "",
-  allTheRage: "",
-  gemstoneGenie: "",
+  allTheRage: "images/jamie_rainbow.png",
+  gemstoneGenie: "images/gemstone_geenie.jpg",
   chamberLogo: "",
 };
 
@@ -108,7 +108,45 @@ function SocialLinks() {
     </div>
   );
 }
-
+function SocialIcon({ platform, href, label }) {
+  return (
+    <a
+      className="social-icon"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+    >
+      {platform === "instagram" ? (
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          aria-hidden="true"
+        >
+          <rect x="3" y="3" width="18" height="18" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle
+            cx="17.5"
+            cy="6.5"
+            r="1"
+            fill="currentColor"
+            stroke="none"
+          />
+        </svg>
+      ) : (
+        <svg
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path d="M14 22v-9h3l.5-4H14V6.5c0-1.2.4-2 2-2h1.7V1.1A23 23 0 0 0 15.2 1C12.6 1 11 2.6 11 5.5V9H8v4h3v9h3Z" />
+        </svg>
+      )}
+    </a>
+  );
+}
 export default function App() {
   const [shareMessage, setShareMessage] = useState("");
 
@@ -496,35 +534,50 @@ export default function App() {
           <section className="makers-section journal-width">
             <p className="eyebrow">Meet the makers</p>
 
-            <div className="makers-grid">
-              <div className="maker">
-                <Media
-                  src={media.allTheRage}
-                  alt="Creations from All the Rage"
-                  portrait
-                />
-                <h2>All the Rage</h2>
-                <p>
-                  A little woodland fantasy: illuminated mushroom fairy
-                  crowns adorned with real crystals, clay moon jewelry,
-                  hand-painted terracotta planters, and houseplants.
-                </p>
-              </div>
+<div className="makers-grid">
+  <div className="maker maker--portrait">
+    <Media
+      src={media.allTheRage}
+      alt="Creations from All the Rage"
+      portrait
+    />
 
-              <div className="maker">
-                <Media
-                  src={media.gemstoneGenie}
-                  alt="Creations from Gemstone Genie"
-                  portrait
-                />
-                <h2>Gemstone Genie</h2>
-                <p>
-                  Custom wire-wrapped jewelry and other oddities,
-                  bringing crystals and materials from nature into
-                  individually crafted pieces.
-                </p>
-              </div>
-            </div>
+    <h2>All the Rage</h2>
+
+    <p>
+      A little woodland fantasy: illuminated mushroom fairy
+      crowns adorned with real crystals, clay moon jewelry,
+      hand-painted terracotta planters, and houseplants.
+    </p>
+
+    <SocialIcon
+      platform="instagram"
+      href="https://www.instagram.com/alltherageinsta/"
+      label="Visit All the Rage on Instagram"
+    />
+  </div>
+
+  <div className="maker maker--landscape">
+    <Media
+      src={media.gemstoneGenie}
+      alt="Creations from Gemstone Genie"
+    />
+
+    <h2>Gemstone Genie</h2>
+
+    <p>
+      Custom wire-wrapped jewelry and other oddities,
+      bringing crystals and materials from nature into
+      individually crafted pieces.
+    </p>
+
+    <SocialIcon
+      platform="facebook"
+      href="https://www.facebook.com/media/set/?set=a.142173428855761&type=3"
+      label="View Gemstone Genie’s collection on Facebook"
+    />
+  </div>
+</div>
 
             <div className="makers-follow">
               <p>
