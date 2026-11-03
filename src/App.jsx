@@ -292,10 +292,12 @@ useEffect(() => {
             </p>
           </div>
 
-<section className="genesee-feature journal-width">
-  <GeneseeSlideshow kind="videos" />
+<section className="genesee-section journal-width">
+  <div className="genesee-section__video">
+    <GeneseeSlideshow kind="videos" />
+  </div>
 
-  <div className="genesee-feature__copy">
+  <div className="genesee-section__copy">
     <p className="eyebrow">An October in the valley</p>
 
     <p>
@@ -307,7 +309,39 @@ useEffect(() => {
     </p>
   </div>
 
-  <GeneseeSlideshow kind="photos" />
+  <figure className="genesee-section__gallery">
+    <div className="genesee-photo-row">
+      {[
+        "genesee_farms1.jpeg",
+        "genesee_farms2.jpeg",
+        "genessee_farms4.jpeg",
+        "genesee_farms5.jpeg",
+        "genesee_farms6.jpeg",
+      ].map((filename, index) => (
+        <img
+          key={filename}
+          src={asset(`images/${filename}`)}
+          alt={`Scenes from Genesee Farms, photograph ${index + 1}`}
+          loading="lazy"
+        />
+      ))}
+    </div>
+
+    <figcaption>
+      While the farm is winterizing, mixed green lettuces
+      can still be put together for you by arrangement with
+      LJL. Message the farm on Facebook or arrange through
+      the contact page on{" "}
+      <a
+        href="https://geneseefarm.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        its website ↗
+      </a>
+      .
+    </figcaption>
+  </figure>
 </section>
 
           <section className="portrait-story portrait-story--reverse journal-width">

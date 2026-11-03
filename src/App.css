@@ -1069,3 +1069,72 @@ video.journal-media {
   color: #fefefc;
   border-color: rgb(254 254 252 / 35%);
 }
+
+.genesee-section {
+  margin-bottom: clamp(72px, 9vw, 130px);
+}
+
+.genesee-section__video {
+  display: flex;
+  justify-content: center;
+}
+
+.genesee-section__video .genesee-reel--videos {
+  width: min(100%, 280px, 45svh);
+}
+
+.genesee-section__copy {
+  max-width: 680px;
+  margin: 40px auto 36px;
+}
+
+.genesee-section__copy > p {
+  margin: 0 0 24px;
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.85;
+}
+
+.genesee-section__copy > .eyebrow {
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.genesee-photo-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(8px, 1.4vw, 20px);
+}
+
+.genesee-photo-row img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.genesee-section__gallery figcaption {
+  max-width: 680px;
+  margin: 16px auto 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.genesee-section__gallery figcaption a {
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .genesee-section__video .genesee-reel--videos {
+    width: min(100%, 240px, 44svh);
+  }
+
+  .genesee-photo-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .genesee-section__copy {
+    margin-top: 32px;
+  }
+}
