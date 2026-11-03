@@ -1306,3 +1306,80 @@ video.journal-media {
     grid-row: 2;
   }
 }
+
+/* Cy Hall — photographs lifted gently from the page */
+.cy-hall-feature {
+  margin-block: clamp(64px, 8vw, 120px);
+}
+
+.cy-hall-feature__top {
+  display: grid;
+  grid-template-columns: minmax(0, 340px) minmax(0, 480px);
+  justify-content: center;
+  align-items: center;
+  gap: clamp(32px, 5vw, 80px);
+}
+
+.cy-hall-feature figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.cy-hall-feature img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow:
+    0 4px 12px rgb(47 43 35 / 7%),
+    0 18px 40px rgb(47 43 35 / 12%);
+}
+
+.cy-hall-feature__copy p {
+  margin: 0;
+  font-size: clamp(16px, 1.2vw, 19px);
+  line-height: 1.85;
+}
+
+.cy-hall-feature .cy-hall-feature__second {
+  width: min(100%, 680px);
+  margin: clamp(40px, 6vw, 80px) auto 0;
+}
+
+@media (max-width: 760px) {
+  .cy-hall-feature__top {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .cy-hall-feature__copy {
+    grid-row: 1;
+  }
+
+  .cy-hall-feature__first {
+    grid-row: 2;
+    width: min(100%, 340px);
+    justify-self: center;
+  }
+
+  .cy-hall-feature .cy-hall-feature__second {
+    margin-top: 36px;
+  }
+}
+.waystation-feature__image img {
+  box-shadow:
+    0 4px 12px rgb(47 43 35 / 7%),
+    0 18px 40px rgb(47 43 35 / 12%);
+}
+
+.hotel-feature img {
+  box-shadow:
+    0 4px 12px rgb(47 43 35 / 7%),
+    0 18px 40px rgb(47 43 35 / 12%);
+}
+
+img[src*="jamie_rainbow"],
+img[src*="gemstone_geenie"] {
+  box-shadow:
+    0 4px 12px rgb(47 43 35 / 7%),
+    0 18px 40px rgb(47 43 35 / 12%);
+}

@@ -432,16 +432,38 @@ useEffect(() => {
             </figcaption>
           </figure>
 
-          <div className="article-copy opening">
-            <p>
-              In Greenville, preserving the past is itself a new
-              beginning. The Greenville Cy Hall Memorial Museum welcomed
-              visitors to tour its rebuilt building during an October 25
-              open house. After the Dixie Fire destroyed its historic
-              building and much of its collection, this gathering marked
-              a meaningful step toward the museum’s return.
-            </p>
-          </div>
+        <section className="cy-hall-feature journal-width">
+  <div className="cy-hall-feature__top">
+    <figure className="cy-hall-feature__first">
+      <img
+        src={asset("images/cyHall1.jpeg")}
+        alt="Greenville Cy Hall Memorial Museum"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+
+    <div className="cy-hall-feature__copy">
+      <p>
+        In Greenville, preserving the past is itself a new beginning.
+        The Greenville Cy Hall Memorial Museum welcomed visitors to tour
+        its rebuilt building during an October 25 open house. After the
+        Dixie Fire destroyed its historic building and much of its
+        collection, this gathering marked a meaningful step toward the
+        museum’s return.
+      </p>
+    </div>
+  </div>
+
+  <figure className="cy-hall-feature__second">
+    <img
+      src={asset("images/cyMuseumGreenville.jpeg")}
+      alt="A view of the Greenville Cy Hall Memorial Museum"
+      loading="lazy"
+      decoding="async"
+    />
+  </figure>
+</section>
 
 <section className="waystation-feature">
   <div className="waystation-feature__copy">
@@ -667,9 +689,7 @@ useEffect(() => {
     <h2>All the Rage</h2>
 
     <p>
-      A little woodland fantasy: illuminated mushroom fairy
-      crowns adorned with real crystals, clay moon jewelry,
-      hand-painted terracotta planters, and houseplants.
+Nature, whimsy, and a little magic come together at All the Rage: light-up mushroom crowns adorned with real quartz crystals and moss, flower crowns, clay moon necklaces, and hand-painted terra cotta pots featuring imaginative alien landscapes. Each piece is individually handmade—unusual, colorful, and fun.
     </p>
 
     <SocialIcon
