@@ -662,3 +662,23 @@ video.journal-media {
     transition: none;
   }
 }
+
+.hotel-image-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(12px, 2vw, 28px);
+}
+
+.hotel-image-pair img.journal-media {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+}
+
+@media (max-width: 640px) {
+  .hotel-image-pair {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+}

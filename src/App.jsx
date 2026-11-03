@@ -13,12 +13,15 @@ const media = {
   allTheRage: "images/jamie_rainbow.png",
   gemstoneGenie: "images/gemstone_geenie.jpg",
   chamberLogo: "",
+  hotelOutside: "images/crescent_hotel_outside.jpeg",
+hotelRoom: "images/room_at_crescent_hotel.jpeg",
 };
 
 const links = {
   facebook: "",
   instagram: "",
-  hotel: "",
+  hotel:
+  "https://app.mews.com/distributor/4b6eaa0c-7e6c-48c5-a8c3-b42d009d25a8",
   alyssaEmail: "",
   thanksgiving: "",
   paradeForm: "",
@@ -343,29 +346,37 @@ export default function App() {
             </div>
           </section>
 
-          <section className="journal-width">
-            <Media
-              src={media.hotel}
-              alt="Newly remodeled rooms at The Crescent Hotel"
-            />
+<section className="journal-width">
+  <div className="hotel-image-pair">
+    <Media
+      src={media.hotelOutside}
+      alt="The exterior of The Crescent Hotel in Crescent Mills"
+    />
 
-            <div className="editorial-row">
-              <div className="editorial-row__copy">
-                <p>
-                  In Crescent Mills, The Crescent Hotel is welcoming
-                  guests into its newly remodeled upstairs rooms. A
-                  familiar landmark with a fresh look, its transformation
-                  is another reminder that change can bring new life to
-                  places we have long known.
-                </p>
-              </div>
-              <Sidebar title="Stay in Crescent Mills">
-                <OptionalLink href={links.hotel}>
-                  Book a Room at The Crescent Hotel ↗
-                </OptionalLink>
-              </Sidebar>
-            </div>
-          </section>
+    <Media
+      src={media.hotelRoom}
+      alt="A newly remodeled guest room at The Crescent Hotel"
+    />
+  </div>
+
+  <div className="editorial-row">
+    <div className="editorial-row__copy">
+      <p>
+        In Crescent Mills, The Crescent Hotel is welcoming
+        guests into its newly remodeled upstairs rooms.
+        A familiar landmark with a fresh look, its
+        transformation is another reminder that change
+        can bring new life to places we have long known.
+      </p>
+    </div>
+
+    <Sidebar title="Stay in Crescent Mills">
+      <OptionalLink href={links.hotel}>
+        Book a Room at The Crescent Hotel ↗
+      </OptionalLink>
+    </Sidebar>
+  </div>
+</section>
 
           <section className="editorial-row journal-width">
             <div className="editorial-row__copy">
@@ -376,20 +387,16 @@ export default function App() {
                 Planning is underway for this year’s gathering.
               </p>
             </div>
-            <Sidebar title="Christmas in Crescent Vendors">
-              <p>
-                Chamber members interested in a vendor space are invited
-                to contact Alyssa.
-              </p>
-              {links.alyssaEmail && (
-                <a
-                  className="journal-link"
-                  href={`mailto:${links.alyssaEmail}`}
-                >
-                  Email Alyssa ↗
-                </a>
-              )}
-            </Sidebar>
+<Sidebar title="Christmas in Crescent Vendors">
+  <p>
+    Chamber members interested in a vendor space are
+    invited to text Alyssa Dobbins.
+  </p>
+
+  <a className="journal-link" href="sms:+15302498941">
+    Text Alyssa · (530) 249-8941 ↗
+  </a>
+</Sidebar>
           </section>
 
           <div className="article-copy opening">
