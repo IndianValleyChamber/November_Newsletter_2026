@@ -196,6 +196,31 @@ useEffect(() => {
   return <EventsCalendar />;
 }
 
+const [showScrollHint, setShowScrollHint] = useState(false);
+
+useEffect(() => {
+  let timer;
+
+  function updateScrollHint() {
+    window.clearTimeout(timer);
+    setShowScrollHint(false);
+
+    if (window.scrollY < 40) {
+      timer = window.setTimeout(() => {
+        setShowScrollHint(true);
+      }, 5000);
+    }
+  }
+
+  updateScrollHint();
+  window.addEventListener("scroll", updateScrollHint, { passive: true });
+
+  return () => {
+    window.clearTimeout(timer);
+    window.removeEventListener("scroll", updateScrollHint);
+  };
+}, [showCalendar]);
+
   return (
     <>
       <a className="skip-link" href="#journal">
@@ -264,6 +289,42 @@ useEffect(() => {
                 <span role="status">{shareMessage}</span>
               </div>
             </div>
+            <button
+  type="button"
+  className={`hero-scroll-hint ${showScrollHint ? "is-visible" : ""}`}
+  tabIndex={showScrollHint ? 0 : -1}
+  aria-hidden={!showScrollHint}
+  onClick={() => {
+    const opening = document.querySelector(".opening");
+
+    if (opening) {
+      const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      opening.scrollIntoView({
+        behavior: reducedMotion ? "auto" : "smooth",
+        block: "start",
+      });
+    }
+
+    setShowScrollHint(false);
+  }}
+>
+  <span>Scroll to explore</span>
+
+  <svg
+    viewBox="0 0 24 24"
+    width="20"
+    height="20"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.2"
+    aria-hidden="true"
+  >
+    <path d="M12 4v15M6 13l6 6 6-6" />
+  </svg>
+</button>
           </header>
 
           <div className="article-copy opening">
