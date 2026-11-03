@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./App.css";
+import GeneseeSlideshow from "./GeneseeSlideshow";
+import UmcSlideshow from "./UmcSlideshow";
 
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
@@ -268,32 +270,26 @@ export default function App() {
             </p>
           </div>
 
-          <section className="portrait-story journal-width">
-            <Media
-              src={media.genesee}
-              alt="An October visit to Genesee Farms"
-              video
-              portrait
-            />
-            <div className="portrait-story__copy">
-              <p className="eyebrow">An October in the valley</p>
-              <p>
-                In Genesee Valley, the opening of Genesee Farms offers
-                another place to gather and a new connection to the land.
-                The organic, sustainable farm welcomed visitors this
-                October, giving neighbors a chance to explore and meet
-                the people bringing it to life.
-              </p>
-            </div>
-          </section>
+<section className="genesee-feature journal-width">
+  <GeneseeSlideshow kind="videos" />
+
+  <div className="genesee-feature__copy">
+    <p className="eyebrow">An October in the valley</p>
+
+    <p>
+      In Genesee Valley, the opening of Genesee Farms offers
+      another place to gather and a new connection to the land.
+      The organic, sustainable farm welcomed visitors this
+      October, giving neighbors a chance to explore and meet
+      the people bringing it to life.
+    </p>
+  </div>
+
+  <GeneseeSlideshow kind="photos" />
+</section>
 
           <section className="portrait-story portrait-story--reverse journal-width">
-            <Media
-              src={media.umc}
-              alt="UMC’s Fall into Greenville festival"
-              video
-              portrait
-            />
+        <UmcSlideshow />
             <div className="portrait-story__copy">
               <p>
                 October also brought new ways to celebrate together.

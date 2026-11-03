@@ -721,3 +721,325 @@ video.journal-media {
     gap: 32px;
   }
 }
+
+.genesee-slideshow {
+  width: min(100%, 340px);
+  max-width: 340px;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  justify-self: center;
+  margin-bottom: 40px;
+  background: transparent;
+}
+
+/* Fit the slideshow within the desktop reading view. */
+@media (min-width: 761px) {
+  .genesee-slideshow {
+    width: min(100%, 340px, 49.5svh);
+  }
+}
+
+.genesee-slideshow__slide img,
+.genesee-slideshow__slide video {
+  object-fit: contain;
+  background: transparent;
+}
+
+.genesee-slideshow__caption {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.genesee-slideshow__caption button {
+  padding: 8px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .genesee-slideshow {
+    width: min(100%, 280px, 54svh);
+    max-width: 280px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Genesee Farms: overlapping slides with automatic crossfades */
+.genesee-slideshow {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 340px, 49.5svh);
+  max-width: 340px;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  justify-self: center;
+  margin-bottom: 44px;
+  background: transparent;
+}
+
+.genesee-slideshow > .genesee-slideshow__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1800ms ease-in-out;
+}
+
+.genesee-slideshow > .genesee-slideshow__slide.is-active {
+  opacity: 1;
+}
+
+.genesee-slideshow__slide > img,
+.genesee-slideshow__slide > video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  background: transparent;
+}
+
+.genesee-slideshow__caption {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding-top: 12px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+@media (max-width: 760px) {
+  .genesee-slideshow {
+    width: min(100%, 280px, 54svh);
+    max-width: 280px;
+    margin-bottom: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .genesee-slideshow > .genesee-slideshow__slide {
+    transition: none;
+  }
+}
+
+.genesee-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(36px, 6vw, 90px);
+  margin-bottom: clamp(72px, 9vw, 130px);
+}
+
+.genesee-feature__right {
+  min-width: 0;
+}
+
+.genesee-feature__copy {
+  max-width: 470px;
+}
+
+.genesee-feature__copy > p {
+  margin: 0 0 26px;
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.85;
+}
+
+.genesee-feature__copy > .eyebrow {
+  margin-bottom: 24px;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.genesee-reel {
+  width: 100%;
+  margin: 0;
+  background: transparent;
+}
+
+/* Slightly smaller videos, still in the left column. */
+.genesee-reel--videos {
+  width: min(100%, 300px, 45svh);
+  justify-self: start;
+}
+
+.genesee-reel--photos {
+  width: min(100%, 190px);
+  margin-top: 30px;
+}
+
+.genesee-reel__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background: transparent;
+}
+
+.genesee-reel__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1800ms ease-in-out;
+}
+
+.genesee-reel__slide.is-active {
+  opacity: 1;
+}
+
+.genesee-reel__slide img,
+.genesee-reel__slide video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: transparent;
+}
+
+.genesee-reel figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 760px) {
+  .genesee-feature {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .genesee-reel--videos {
+    width: min(100%, 260px, 48svh);
+    justify-self: center;
+  }
+
+  .genesee-feature__copy {
+    max-width: none;
+  }
+
+  .genesee-reel--photos {
+    width: min(100%, 170px);
+    margin-top: 24px;
+    margin-inline: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .genesee-reel__slide {
+    transition: none;
+  }
+}
+
+.genesee-feature {
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.3fr)
+    minmax(0, 0.6fr);
+  align-items: start;
+  gap: clamp(24px, 3vw, 48px);
+}
+
+.genesee-feature > .genesee-reel--photos {
+  margin-top: 0;
+  justify-self: end;
+}
+
+@media (max-width: 760px) {
+  .genesee-feature {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .genesee-feature > .genesee-reel--photos {
+    justify-self: center;
+    margin-inline: auto;
+  }
+}
+
+.umc-slideshow {
+  width: min(100%, 300px, 45svh);
+  margin: 0;
+  justify-self: end;
+}
+
+.umc-slideshow__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background: transparent;
+}
+
+.umc-slideshow__video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1800ms ease-in-out;
+}
+
+.umc-slideshow__video.is-active {
+  opacity: 1;
+}
+
+.umc-slideshow figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+/* Keep the video on the right in the existing desktop section. */
+.portrait-story--reverse > .umc-slideshow {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+@media (max-width: 760px) {
+  .umc-slideshow {
+    width: min(100%, 260px, 48svh);
+    justify-self: center;
+  }
+
+  .portrait-story--reverse > .umc-slideshow {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .umc-slideshow__video {
+    transition: none;
+  }
+}
+
+.umc-slideshow__frame {
+  aspect-ratio: 1 / 1;
+}
+
+.umc-slideshow figcaption {
+  margin-top: 12px;
+}
