@@ -1248,3 +1248,61 @@ video.journal-media {
     grid-row: auto;
   }
 }
+
+/* The Waystation — large editorial photograph */
+.waystation-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  width: 100%;
+  margin-block: clamp(64px, 8vw, 120px);
+}
+
+.waystation-feature__image {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+  margin: 0;
+}
+
+.waystation-feature__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.waystation-feature__copy {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  padding: clamp(32px, 5vw, 88px);
+}
+
+.waystation-feature__copy p {
+  max-width: 480px;
+  margin: 0;
+  font-size: clamp(16px, 1.2vw, 19px);
+  line-height: 1.85;
+}
+
+@media (max-width: 760px) {
+  .waystation-feature {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .waystation-feature__copy {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 0 20px;
+  }
+
+  .waystation-feature__copy p {
+    max-width: none;
+  }
+
+  .waystation-feature__image {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}

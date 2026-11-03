@@ -443,21 +443,25 @@ useEffect(() => {
             </p>
           </div>
 
-          <section className="journal-width">
-            <Media
-              src={media.waystation}
-              alt="Finishing touches at The Waystation"
-              video
-            />
-            <div className="article-copy">
-              <p>
-                That same sense of renewal is taking shape elsewhere in
-                town. At The Waystation, finishing touches on the exterior
-                are bringing its changing appearance into focus, another
-                visible step in Greenville’s ongoing rebuilding.
-              </p>
-            </div>
-          </section>
+<section className="waystation-feature">
+  <div className="waystation-feature__copy">
+    <p>
+      That same sense of renewal is taking shape elsewhere in town.
+      At The Waystation, finishing touches on the exterior are bringing
+      its changing appearance into focus, another visible step in
+      Greenville’s ongoing rebuilding.
+    </p>
+  </div>
+
+  <figure className="waystation-feature__image">
+    <img
+      src={asset("images/waystation.jpeg")}
+      alt="The Waystation exterior in Greenville"
+      loading="lazy"
+      decoding="async"
+    />
+  </figure>
+</section>
 
 <section className="hotel-feature journal-width">
   <div className="hotel-feature__left">
