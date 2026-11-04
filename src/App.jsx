@@ -266,7 +266,7 @@ useEffect(() => {
 
 <div className="navbar__actions">
   <a className="navbar__calendar" href="#calendar">
-    Calendar of Events ↗
+    Calendar of Events 
   </a>
 
   <a
@@ -275,7 +275,7 @@ useEffect(() => {
     target="_blank"
     rel="noopener noreferrer"
   >
-    Become a Member ↗
+    Become a Member 
   </a>
 </div>
       </header>
