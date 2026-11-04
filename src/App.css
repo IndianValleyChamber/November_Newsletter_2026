@@ -2036,3 +2036,36 @@ main video {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+.halloween-gallery {
+  margin-block: 0 clamp(48px, 6vw, 88px);
+}
+
+.halloween-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(10px, 1.5vw, 20px);
+}
+
+.halloween-gallery__grid > :is(img, video) {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  background: #302823;
+  box-shadow: 0 6px 18px rgb(47 43 35 / 10%);
+}
+
+.halloween-gallery figcaption {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .halloween-gallery__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

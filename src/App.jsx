@@ -916,14 +916,83 @@ Nature, whimsy, and a little magic come together at All the Rage: light-up mushr
   <SocialLinks />
 
 <p>
-  For more community events, visit the Indian Valley
-  Recreation &amp; Parks District’s events page.
+  The Indian Valley Recreation &amp; Parks District helps keep events
+  like Taylorsville’s Trunk-or-Treat running safely and smoothly. The
+  Tavern and neighbors turn out for the kids, too, and the decorated
+  houses make trick-or-treating around town worth the walk.
+</p>
+
+<p>
+  Elsewhere in the valley, Nicole Chilelli brought Halloween to life
+  with The Cursed Cove. If you missed it, she shared{" "}
+  <a
+    href="https://www.instagram.com/nicole_chilelli/?hl=en"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    clips on Instagram
+  </a>.
+</p>
+
+<p>
+  For more local classes, workshops, and community gatherings, visit
+  the district’s events page.
 </p>
 
 <OptionalLink href="https://ivrpd.org/events/">
   Browse IVRPD Events ↗
 </OptionalLink>
+
 </section>
+<figure className="halloween-gallery journal-width">
+  <div className="halloween-gallery__grid">
+    <video
+      src={asset("images/trickTreatVideo.mov")}
+      aria-label="A short clip of trick-or-treating in Taylorsville"
+      muted
+      playsInline
+      preload="metadata"
+      ref={(video) => {
+        if (!video) return;
+
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (!entry.isIntersecting) return;
+
+            if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+              video.play().catch(() => {});
+            }
+
+            observer.disconnect();
+          },
+          { threshold: 0.5 }
+        );
+
+        observer.observe(video);
+        return () => observer.disconnect();
+      }}
+    />
+    <img
+      src={asset("images/trunk_treat_bus.jpg")}
+      alt="Decorated bus at Taylorsville’s Trunk-or-Treat"
+      loading="lazy"
+      decoding="async"
+    />
+    <img
+      src={asset("images/taylorsvilleTrickOrTreat.jpeg")}
+      alt="Halloween in Taylorsville"
+      loading="lazy"
+      decoding="async"
+    />
+    <img
+      src={asset("images/trickTreat.jpeg.jpeg")}
+      alt="A scene from trick-or-treating in Taylorsville"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  <figcaption>Trick-or-treating in Taylorsville, 2025</figcaption>
+</figure>
         </article>
       </main>
 
