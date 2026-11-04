@@ -323,7 +323,7 @@ useEffect(() => {
     setShowScrollHint(false);
   }}
 >
-  <span>Scroll to explore</span>
+  <span>Scroll</span>
 
   <svg
     viewBox="0 0 24 24"
@@ -341,27 +341,7 @@ useEffect(() => {
 
           <div className="article-copy opening">
             <p>
-              In Indian Valley, traditions have a way of carrying on
-              without much thought. Familiar faces greet us in the little
-              towns that make up our valley and its close neighbors.
-              Knowing the people we pass is one of the quiet constants
-              of life here.
-            </p>
-            <p>
-              Since the Dixie Fire, change has become another constant.
-              Familiar places take new forms, beloved gatherings return,
-              and new traditions begin. This autumn, as gold and
-              rust-colored oak leaves trace veins through the evergreen
-              pines and firs along our mountainsides, there is beauty to
-              notice in the changes around us.
-            </p>
-            <p>
-              California black oaks can send up new shoots after fire
-              from roots that survive beneath the surface. Perhaps there
-              is something familiar in that, too: new growth drawing
-              strength from what remains. As we rebuild, reopen, and
-              gather again, we can make room for what is emerging while
-              holding close the traditions—and the people—that connect us.
+As autumn brings fresh color to Indian Valley, our community calendar reflects changes of its own: favorite events return, newer traditions take root, and new gatherings begin.
             </p>
           </div>
 
@@ -374,11 +354,7 @@ useEffect(() => {
     <p className="eyebrow">An October in the valley</p>
 
     <p>
-      In Genesee Valley, the opening of Genesee Farms offers
-      another place to gather and a new connection to the land.
-      The organic, sustainable farm welcomed visitors this
-      October, giving neighbors a chance to explore and meet
-      the people bringing it to life.
+   Genesee Farm welcomed visitors to its October 3 open house for a tour and demonstrations of growing through the colder months. The farm grows organic produce in Genesee Valley, with young fruit trees planted for future harvests.
     </p>
   </div>
 
