@@ -205,9 +205,7 @@ useEffect(() => {
     }
   }
 
-  if (showCalendar) {
-  return <EventsCalendar />;
-}
+
 
 const [showScrollHint, setShowScrollHint] = useState(false);
 
@@ -233,6 +231,10 @@ useEffect(() => {
     window.removeEventListener("scroll", updateScrollHint);
   };
 }, [showCalendar]);
+
+  if (showCalendar) {
+    return <EventsCalendar />;
+  }
 
   return (
     <>
