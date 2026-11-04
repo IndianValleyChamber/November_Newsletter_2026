@@ -911,12 +911,13 @@ Nature, whimsy, and a little magic come together at All the Rage: light-up mushr
   </h2>
 
 <p>
-  The Indian Valley Recreation &amp; Parks District helps keep events
-  like Taylorsville’s Trunk-or-Treat running safely and smoothly. The
-  Tavern and neighbors turn out for the kids, too, and the decorated
-  houses make trick-or-treating around town worth the walk.
+  Trunk-or-Treat is a newer way to celebrate Halloween in Indian Valley,
+  and it’s already become a tradition in Taylorsville. The Indian Valley
+  Recreation &amp; Parks District helps keep the event running safely and
+  smoothly, while the Tavern and neighbors turn out for the kids. With
+  decorated houses along the way, there’s still plenty to see going
+  door to door.
 </p>
-
 <p>
   Elsewhere in the valley, Nicole Chilelli brought Halloween to life
   with The Cursed Cove. If you missed it, she shared{" "}
