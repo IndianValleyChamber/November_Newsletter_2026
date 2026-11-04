@@ -4,6 +4,7 @@ import GeneseeSlideshow from "./GeneseeSlideshow";
 import UmcSlideshow from "./UmcSlideshow";
 import MediaLightbox from "./MediaLightbox";
 import EventsCalendar from "./EventsCalendar";
+import LightParadeSlideshow from "./LightParadeSlideshow";
 
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
@@ -591,34 +592,77 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
 </Sidebar>
   </div>
 </section>
+<section className="light-parade-feature journal-width">
+  <LightParadeSlideshow />
 
-          <section className="editorial-row journal-width">
-            <div className="editorial-row__copy">
-              <p>
-                As November draws to a close, another familiar celebration
-                will light up Taylorsville. The annual Taylorsville Light
-                Parade returns on Saturday, November 28, at 6 PM,
-                welcoming everyone to ring in the Christmas season.
-              </p>
-            </div>
-            <Sidebar title="Join the Light Parade">
-              <p>
-                Bring your completed entry form and line up by 5:30 PM on
-                Cemetery Road, single file on the museum side. Forms will
-                be collected during lineup.
-              </p>
-              <p>
-                Questions? Contact Laura Kearns at{" "}
-                <a href="mailto:histayhall@gmail.com">
-                  histayhall@gmail.com
-                </a>{" "}
-                or <a href="tel:+16198382420">(619) 838-2420</a>.
-              </p>
-              <OptionalLink href={links.paradeForm}>
-                Print Entry Form ↗
-              </OptionalLink>
-            </Sidebar>
-          </section>
+  <div className="light-parade-feature__copy">
+    <p>
+      As November draws to a close, another familiar celebration
+      will light up Taylorsville. The annual Taylorsville Light
+      Parade returns on Saturday, November 28, at 6 PM,
+      welcoming everyone to ring in the Christmas season.
+    </p>
+
+    <Sidebar title="Join the Light Parade">
+      <p>
+        Bring your completed entry form and line up by 5:30 PM on
+        Cemetery Road, single file on the museum side. Forms will
+        be collected during lineup.
+      </p>
+
+  <div className="parade-contact">
+  <span className="parade-contact__label">
+    Contact Laura Kearns
+  </span>
+
+  <div className="parade-contact__options">
+    <details>
+      <summary aria-label="Show Laura’s email">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          aria-hidden="true"
+        >
+          <rect x="3" y="5" width="18" height="14" rx="1" />
+          <path d="m3 6 9 7 9-7" />
+        </svg>
+      </summary>
+
+      <a href="mailto:histayhall@gmail.com">
+        histayhall@gmail.com
+      </a>
+    </details>
+
+    <details>
+      <summary aria-label="Show Laura’s phone number">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="m7 3 3 5-2 2a15 15 0 0 0 6 6l2-2 5 3-1 4C10 22 2 14 3 4Z" />
+        </svg>
+      </summary>
+
+      <a href="tel:+16198382420">
+        (619) 838-2420
+      </a>
+    </details>
+  </div>
+</div>
+
+      <OptionalLink href={links.paradeForm}>
+        Print Entry Form ↗
+      </OptionalLink>
+    </Sidebar>
+  </div>
+</section>
 
           <section className="editorial-row journal-width">
             <div className="editorial-row__copy">
