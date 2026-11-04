@@ -168,6 +168,28 @@ function SocialIcon({ platform, href, label }) {
     </a>
   );
 }
+function CommunitySupperPhotos({ placement }) {
+  return (
+    <figure className={`supper-photos supper-photos--${placement}`}>
+      <div className="supper-photos__pair">
+        <img
+          src={asset("images/community_supper.jpg")}
+          alt="A scene from the 2025 Community Supper"
+          loading="lazy"
+        />
+        <img
+          src={asset("images/community_supper_2.jpg")}
+          alt="Another view of the 2025 Community Supper"
+          loading="lazy"
+        />
+      </div>
+      <figcaption>
+        Indian Valley Riding and Roping Club Community Supper, 2025
+      </figcaption>
+    </figure>
+  );
+}
+
 export default function App() {
   const [shareMessage, setShareMessage] = useState("");
   const [showCalendar, setShowCalendar] = useState(
@@ -702,6 +724,7 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
     Hall for the November Community Supper. Everyone is welcome
     from 5 to 6:30 PM.
   </p>
+  <CommunitySupperPhotos placement="mobile" />
   <p>
     In Greenville, the Community Thanksgiving Dinner will take
     place on Thursday, November 26, from 11 AM to 3 PM at The
@@ -736,6 +759,7 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
     </a>.
   </p>
 </Sidebar>
+<CommunitySupperPhotos placement="desktop" />
   </div>
 </section>
 <section className="light-parade-feature journal-width">
