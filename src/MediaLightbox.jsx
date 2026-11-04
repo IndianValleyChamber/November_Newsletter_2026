@@ -74,15 +74,15 @@ export default function MediaLightbox() {
       </button>
 
       {media.type === "video" ? (
-        <video
-          key={media.src}
-          src={media.src}
-          className="media-lightbox__media"
-          controls
-          autoPlay
-          muted
-          playsInline
-        />
+      <video
+  key={media.src}
+  src={media.src}
+  className="media-lightbox__media"
+  autoPlay
+  muted
+  loop
+  playsInline
+/>
       ) : (
         <img
           src={media.src}

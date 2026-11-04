@@ -1958,9 +1958,7 @@ main video {
   display: block;
   width: 100%;
   height: auto;
-  box-shadow:
-    0 4px 12px rgb(47 43 35 / 7%),
-    0 18px 40px rgb(47 43 35 / 12%);
+
 }
 
 .shoppe-feature__photo figcaption {
