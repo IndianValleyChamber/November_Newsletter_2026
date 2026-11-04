@@ -420,18 +420,7 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
             </div>
           </section>
 
-          <figure className="journal-width journal-figure">
-            <Media
-              src={media.trunkOrTreat}
-              alt="Halloween in downtown Taylorsville"
-            />
-            <figcaption>
-              On Halloween, IVRPD helped host Taylorsville’s
-              Trunk-or-Treat, where decorated vehicles lined downtown
-              and neighbors handed out goodies alongside the town’s
-              traditional door-to-door trick-or-treating.
-            </figcaption>
-          </figure>
+       
 
         <section className="cy-hall-feature journal-width">
   <div className="cy-hall-feature__top">
@@ -926,15 +915,14 @@ Nature, whimsy, and a little magic come together at All the Rage: light-up mushr
 
   <SocialLinks />
 
-  <p style={{ marginTop: "26px" }}>
-    For more local classes, workshops, and community gatherings,
-    browse the event flyers from the Indian Valley Recreation
-    &amp; Parks District.
-  </p>
+<p>
+  For more community events, visit the Indian Valley
+  Recreation &amp; Parks District’s events page.
+</p>
 
-  <OptionalLink href="https://ivrpd.org/#:~:text=Upcoming%20Events">
-    Browse IVRPD Event Flyers ↗
-  </OptionalLink>
+<OptionalLink href="https://ivrpd.org/events/">
+  Browse IVRPD Events ↗
+</OptionalLink>
 </section>
         </article>
       </main>

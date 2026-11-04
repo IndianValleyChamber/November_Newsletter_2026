@@ -2003,3 +2003,36 @@ main video {
   font-size: clamp(16px, 1.2vw, 18px);
   line-height: 1.85;
 }
+
+.region-burger-gallery {
+  margin: 28px 0 0;
+}
+
+.region-burger-gallery__images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 16px;
+}
+
+.region-burger-gallery__images img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow:
+    0 4px 12px rgb(47 43 35 / 7%),
+    0 18px 40px rgb(47 43 35 / 12%);
+}
+
+.region-burger-gallery figcaption {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 540px) {
+  .region-burger-gallery__images {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
