@@ -1481,3 +1481,24 @@ main video {
   pointer-events: auto;
   cursor: zoom-in;
 }
+
+.genesee-reel__slide {
+  transition: opacity 900ms ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .genesee-reel__slide {
+    transition: none;
+  }
+}
+
+/* Give the Genesee footage more room. */
+.genesee-section__video .genesee-reel--videos {
+  width: min(100%, 360px);
+}
+
+@media (max-width: 760px) {
+  .genesee-section__video .genesee-reel--videos {
+    width: min(100%, 300px);
+  }
+}
