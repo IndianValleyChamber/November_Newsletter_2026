@@ -997,6 +997,9 @@ Nature, whimsy, and a little magic come together at All the Rage: light-up mushr
       </main>
 
       <footer className="journal-footer">
+        <a className="footer-back-to-top" href="#root">
+  Back to Top
+</a>
         {media.chamberLogo ? (
           <img
             className="journal-footer__logo"
