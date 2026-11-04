@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import "./App.css";
 import GeneseeSlideshow from "./GeneseeSlideshow";
 import UmcSlideshow from "./UmcSlideshow";
@@ -172,6 +173,7 @@ export default function App() {
   const [showCalendar, setShowCalendar] = useState(
   () => window.location.hash === "#calendar"
 );
+const [navMenuOpen, setNavMenuOpen] = useState(false);
 
 useEffect(() => {
   function updatePage() {
@@ -264,19 +266,71 @@ useEffect(() => {
   November 2026 Newsletter
 </a>
 
-<div className="navbar__actions">
-  <a className="navbar__calendar" href="#calendar">
-    Calendar of Events 
-  </a>
-
-  <a
-    className="navbar__membership"
-    href="https://www.zeffy.com/en-US/ticketing/indian-valley-chamber-of-commerces-memberships"
-    target="_blank"
-    rel="noopener noreferrer"
+<div
+  className={`navbar__menu${navMenuOpen ? " is-open" : ""}`}
+  onPointerEnter={(event) => {
+    if (event.pointerType === "mouse") setNavMenuOpen(true);
+  }}
+  onPointerLeave={(event) => {
+    if (
+      event.pointerType === "mouse" &&
+      !event.currentTarget.contains(document.activeElement)
+    ) {
+      setNavMenuOpen(false);
+    }
+  }}
+  onBlur={(event) => {
+    if (!event.currentTarget.contains(event.relatedTarget)) {
+      setNavMenuOpen(false);
+    }
+  }}
+  onKeyDown={(event) => {
+    if (event.key === "Escape" && navMenuOpen) {
+      event.currentTarget.querySelector("button")?.focus();
+      setNavMenuOpen(false);
+    }
+  }}
+>
+  <button
+    className="navbar__menu-toggle"
+    type="button"
+    aria-label="Newsletter navigation"
+    aria-expanded={navMenuOpen}
+    aria-controls="newsletter-nav-links"
+    onClick={() => setNavMenuOpen((open) => !open)}
   >
-    Become a Member 
-  </a>
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      aria-hidden="true"
+    >
+      <path d="M3 6h18M3 12h18M3 18h18" />
+    </svg>
+  </button>
+
+  <div className="navbar__actions" id="newsletter-nav-links">
+    <a
+      className="navbar__calendar"
+      href="#calendar"
+      onClick={() => setNavMenuOpen(false)}
+    >
+      Calendar of Events
+    </a>
+
+    <a
+      className="navbar__membership"
+      href="https://www.zeffy.com/en-US/ticketing/indian-valley-chamber-of-commerces-memberships"
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => setNavMenuOpen(false)}
+    >
+      Become a Member
+    </a>
+  </div>
 </div>
       </header>
 
