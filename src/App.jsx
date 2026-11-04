@@ -897,7 +897,45 @@ Nature, whimsy, and a little magic come together at All the Rage: light-up mushr
               the Artisan Shoppe. We look forward to the ideas and
               experience both will bring as we continue our work together.
             </p>
+            <figure className="region-burger-gallery">
+  <div className="region-burger-gallery__images">
+    <img
+      src={asset("images/region_burger_1.jpg")}
+      alt="Region Burger"
+      loading="lazy"
+      decoding="async"
+    />
+    <img
+      src={asset("images/region_burger_2.jpg")}
+      alt="Another view of Region Burger"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  <figcaption>Region Burger</figcaption>
+</figure>
           </div>
+          <section className="article-copy opening" aria-labelledby="more-around-the-valley">
+  <h2 id="more-around-the-valley">More Around the Valley</h2>
+
+  <p>
+    More events are in the works. Follow the Chamber on Facebook
+    and Instagram for new announcements and details as plans come
+    together.
+  </p>
+
+  <SocialLinks />
+
+  <p style={{ marginTop: "26px" }}>
+    For more local classes, workshops, and community gatherings,
+    browse the event flyers from the Indian Valley Recreation
+    &amp; Parks District.
+  </p>
+
+  <OptionalLink href="https://ivrpd.org/#:~:text=Upcoming%20Events">
+    Browse IVRPD Event Flyers ↗
+  </OptionalLink>
+</section>
         </article>
       </main>
 
