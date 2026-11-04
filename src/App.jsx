@@ -743,54 +743,93 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
     </Sidebar>
   </div>
 </section>
+<section className="shoppe-feature journal-width">
+  <div className="shoppe-feature__lead">
+    <div className="editorial-row__copy">
+      <p>
+        Still a young tradition itself, the Artisan Shoppe returns for
+        its second year—this time at Indian Valley Mercantile in
+        Greenville. A new setting, returning participants, and new
+        makers joining in: another example of the familiar growing
+        into something new.
+      </p>
 
-          <section className="editorial-row journal-width">
-            <div className="editorial-row__copy">
-              <p>
-                Still a young tradition itself, the Artisan Shoppe
-                returns for its second year—this time at Indian Valley
-                Mercantile in Greenville. A new setting, returning
-                participants, and new makers joining in: another example
-                of the familiar growing into something new.
-              </p>
-              <p className="shoppe-details">
-                November 26–December 20, 2026
-                <br />
-                147 Crescent Street, Greenville
-              </p>
-            </div>
+      <p className="shoppe-details">
+        November 26–December 20, 2026
+        <br />
+        147 Crescent Street, Greenville
+      </p>
+    </div>
 
-            <div className="sidebar-stack">
-              <Sidebar title="Behind the Shoppe">
-                <p>
-                  This year’s effort is headed by Shelby Janea, founder
-                  of the Women of Plumas County Expo. Shelby personally
-                  funded its initial venue booking and waived booth
-                  fees, helping bring around 50 women-owned businesses
-                  and nonprofits together.
-                </p>
-                <p>
-                  The Expo returns to the Plumas County Fairgrounds on
-                  Sunday, September 12, 2027.
-                </p>
-              </Sidebar>
+    <figure className="shoppe-reel">
+      <iframe
+        className="shoppe-reel__video"
+        title="A look at the Artisan Shoppe"
+        src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1561939162401767%2F&show_text=false&width=267&t=0"
+        width={267}
+        height={476}
+        loading="lazy"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+      />
+      <figcaption>
+        <a
+          href="https://www.facebook.com/reel/1561939162401767/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Watch on Facebook ↗
+        </a>
+      </figcaption>
+    </figure>
+  </div>
 
-              <Sidebar title="Still interested in participating?">
-                <p>
-                  The Artisan Shoppe filled quickly, but applications
-                  are open for potential overflow spaces. Additional
-                  vendors may be selected the week before opening,
-                  depending on available space.
-                </p>
-                <OptionalLink href={links.overflow}>
-                  Apply for Overflow Space ↗
-                </OptionalLink>
-                <OptionalLink href={links.membership}>
-                  Join the Chamber ↗
-                </OptionalLink>
-              </Sidebar>
-            </div>
-          </section>
+<div className="shoppe-feature__notes">
+  <figure className="shoppe-feature__photo">
+    <img
+      src={asset("images/shelby.png")}
+      alt="Shelby Janea and Katie smiling together"
+      loading="lazy"
+      decoding="async"
+    />
+    <figcaption>
+      Shelby Janea with Katie at the Plumas County Fairgrounds.
+    </figcaption>
+  </figure>
+
+  <Sidebar title="Behind the Shoppe">
+    <p>
+      This year’s effort is headed by Shelby Janea, founder of the
+      Women of Plumas County Expo. Shelby personally funded its
+      initial venue booking and waived booth fees, helping bring
+      around 50 women-owned businesses and nonprofits together.
+    </p>
+    <p>
+      The Expo returns to the Plumas County Fairgrounds on
+      Sunday, September 12, 2027.
+    </p>
+  </Sidebar>
+
+  <div className="shoppe-feature__overflow">
+    <Sidebar title="Still Interested in Participating?">
+      <p>
+        The Shoppe filled quickly, but artisans can still apply for
+        overflow space. Additional vendors may be selected the week
+        before opening if space allows.
+      </p>
+
+      <div className="shoppe-feature__overflow-links">
+        <OptionalLink href={links.overflow}>
+          Apply for Overflow Space ↗
+        </OptionalLink>
+        <OptionalLink href={links.membership}>
+          Join the Chamber ↗
+        </OptionalLink>
+      </div>
+    </Sidebar>
+  </div>
+</div>
+</section>
 
           <section className="makers-section journal-width">
             <p className="eyebrow">Meet the makers</p>
