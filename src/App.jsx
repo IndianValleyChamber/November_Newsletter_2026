@@ -283,13 +283,20 @@ useEffect(() => {
       <main id="journal">
         <article>
           <header className="journal-hero">
-            <img
-              className="journal-hero__image"
-              src={asset("images/fall_colors.jpg")}
-              alt="Autumn colors in Indian Valley, Plumas County, California"
-              fetchPriority="high"
-            />
-
+            <figure className="journal-hero__figure">
+  <img
+    className="journal-hero__image"
+    src={asset("images/fall_colors.jpeg")}
+    alt="Autumn colors at Indian Falls, Plumas County, California"
+    fetchPriority="high"
+  />
+  <figcaption className="journal-hero__caption">
+    <abbr title={'Maidu for "Valley End Falls"'} tabIndex={0}>
+      <i>Koyom Bukum Sewino</i>
+    </abbr>
+    {", Indian Falls"}
+  </figcaption>
+</figure>
             <div className="journal-hero__content">
               <time className="journal-hero__date" dateTime="2026-11-04">
                 November 5, 2026

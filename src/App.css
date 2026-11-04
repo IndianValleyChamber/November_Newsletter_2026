@@ -2314,3 +2314,47 @@ main video {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.journal-hero__content {
+  bottom: 190px;
+}
+
+.journal-hero__date {
+  font-size: 12px;
+}
+
+.journal-hero__share button {
+  font-size: 14px;
+}
+
+.journal-hero__figure {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+}
+
+.journal-hero__caption {
+  position: absolute;
+  right: 20px;
+  bottom: 14px;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: right;
+  text-shadow: 0 1px 4px rgb(0 0 0 / 80%);
+}
+
+.journal-hero__caption abbr {
+  text-decoration: none;
+  cursor: help;
+}
+
+@media (max-width: 640px) {
+  .journal-hero__content {
+    bottom: 200px;
+  }
+
+  .journal-hero__caption {
+    right: 12px;
+    bottom: 6px;
+    font-size: 11px;
+  }
+}
