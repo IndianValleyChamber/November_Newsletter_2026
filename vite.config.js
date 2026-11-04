@@ -3,9 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-
-  base: "/november-newsletter-2026/",
-
+  base: "/november-2026-newsletter/",
   build: {
     outDir: "dist",
     emptyOutDir: true,
