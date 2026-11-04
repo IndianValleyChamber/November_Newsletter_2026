@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import GeneseeSlideshow from "./GeneseeSlideshow";
 import UmcSlideshow from "./UmcSlideshow";
-
+import MediaLightbox from "./MediaLightbox";
 import EventsCalendar from "./EventsCalendar";
 
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
@@ -757,6 +757,7 @@ Nature, whimsy, and a little magic come together at All the Rage: light-up mushr
 
         <p>© 2026 Indian Valley Chamber of Commerce</p>
       </footer>
+      <MediaLightbox />
     </>
   );
 }

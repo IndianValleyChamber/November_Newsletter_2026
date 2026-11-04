@@ -1392,3 +1392,92 @@ img[src*="gemstone_geenie"] {
 .journal-socials .social-icon {
   margin: 0;
 }
+/* Expanded photographs and videos */
+.media-lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 60px 24px 24px;
+  box-sizing: border-box;
+  border: 0;
+  background: rgb(48 40 35 / 96%);
+  color: #fefefc;
+}
+
+.media-lightbox[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-lightbox::backdrop {
+  background: #302823;
+}
+
+.media-lightbox .media-lightbox__media {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 0;
+  object-fit: contain;
+  box-shadow: none;
+}
+
+.media-lightbox__close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #fefefc;
+  font: 300 36px/1 sans-serif;
+  cursor: pointer;
+}
+
+.media-lightbox__close:focus-visible {
+  outline: 1px solid #fefefc;
+  outline-offset: 3px;
+}
+
+main img,
+main video {
+  cursor: zoom-in;
+}
+
+/* Let clicks reach the currently visible slideshow video. */
+.umc-slideshow__frame video,
+.genesee-reel__frame video {
+  pointer-events: none;
+}
+
+.umc-slideshow__frame video.is-active,
+.genesee-reel__frame video.is-active {
+  pointer-events: auto;
+}
+
+@media (max-width: 760px) {
+  .media-lightbox {
+    padding: 60px 12px 20px;
+  }
+}
+/* Allow clicks only on the visible Genesee slide. */
+.genesee-reel__slide.is-active {
+  pointer-events: auto;
+}
+
+.genesee-reel__slide.is-active video,
+.genesee-reel__slide.is-active img {
+  pointer-events: auto;
+  cursor: zoom-in;
+}
