@@ -878,6 +878,7 @@ Nature, whimsy, and a little magic come together at All the Rage: light-up mushr
           </section>
 
           <div className="article-copy opening">
+            <h2 className="journal-section-title">Welcoming Our New Board Members</h2>
             <p>
               Change is taking place within the Chamber, too. We’re
               pleased to welcome two new Board Members: Jamie Ashley of
@@ -904,16 +905,10 @@ Nature, whimsy, and a little magic come together at All the Rage: light-up mushr
   <figcaption>Region Burger</figcaption>
 </figure>
           </div>
-          <section className="article-copy opening" aria-labelledby="more-around-the-valley">
-  <h2 id="more-around-the-valley">More Around the Valley</h2>
-
-  <p>
-    More events are in the works. Follow the Chamber on Facebook
-    and Instagram for new announcements and details as plans come
-    together.
-  </p>
-
-  <SocialLinks />
+<section className="article-copy opening" aria-labelledby="halloween-around-the-valley">
+  <h2 id="halloween-around-the-valley" className="journal-section-title">
+    Halloween Around the Valley
+  </h2>
 
 <p>
   The Indian Valley Recreation &amp; Parks District helps keep events
@@ -993,6 +988,22 @@ Nature, whimsy, and a little magic come together at All the Rage: light-up mushr
   </div>
   <figcaption>Trick-or-treating in Taylorsville, 2025</figcaption>
 </figure>
+<section
+  className="article-copy opening journal-closing"
+  aria-labelledby="more-around-the-valley"
+>
+  <h2 id="more-around-the-valley" className="journal-section-title">
+    More Around the Valley
+  </h2>
+
+  <p>
+    More events are in the works. Follow the Chamber on Facebook
+    and Instagram for new announcements and details as plans come
+    together.
+  </p>
+
+  <SocialLinks />
+</section>
         </article>
       </main>
 
