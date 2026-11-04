@@ -2,7 +2,51 @@ import { useState } from "react";
 import "./EventsCalendar.css";
 
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
-
+const ivrpdClasses = [
+  {
+    id: "adult-yoga",
+    days: [4, 11, 18],
+    title: "Adult Yoga",
+    time: "8:30–9:15 AM",
+    flyer: "adult-yoga.png",
+  },
+  {
+    id: "seniors-yoga",
+    days: [4, 11, 18],
+    title: "Serenity Seniors Yoga",
+    time: "10–10:45 AM",
+    flyer: "seniors-yoga.png",
+  },
+  {
+    id: "daddy-daughter-dance",
+    days: [5, 12, 19],
+    title: "Daddy Daughter Dance",
+    time: "11:15–11:45 AM",
+    flyer: "daddy-daughter-dance.jpg",
+  },
+  {
+    id: "cheerleading",
+    days: [5, 12, 19],
+    title: "Cheerleading Skills",
+    time: "3:15–4 PM",
+    flyer: "cheerleading.png",
+  },
+  {
+    id: "fall-ceramic-painting",
+    days: [11],
+    title: "Fall Ceramic Painting",
+    time: "1–2:30 PM",
+    location: "Indian Valley Academy Makerspace, 117 Grand St., Greenville",
+    flyer: "fall-ceramic-painting.png",
+  },
+].flatMap(({ id, days, location, ...details }) =>
+  days.map((day) => ({
+    ...details,
+    id: `${id}-${day}`,
+    day,
+    location: location ?? "IVRPD Dance Studio, Room 401, 117 Grand St., Greenville",
+  }))
+);
 const events = [
   {
     id: "museum-dinner",
@@ -69,7 +113,8 @@ const events = [
     description:
       "Participants: line up on Cemetery Road, single file on the museum side. Bring completed entry forms for collection during lineup. Questions: Laura Kearns, histayhall@gmail.com, (619) 838-2420.",
   },
-];
+  ...ivrpdClasses,
+].sort((a, b) => a.day - b.day);
 
 // Events without a confirmed ending are saved with their start time only.
 function googleLink(event) {
@@ -168,27 +213,40 @@ function EventDetails({ event }) {
       <div className="calendar-event__body">
         <p>{event.time}</p>
         <p>{event.location}</p>
-        <p>{event.description}</p>
+        {event.description && <p>{event.description}</p>}
 
-        {event.url && (
-          <a href={event.url} target="_blank" rel="noopener noreferrer">
-            {event.linkLabel} ↗
-          </a>
-        )}
-
-        <div className="calendar-event__actions">
+        {event.flyer ? (
           <a
-            href={googleLink(event)}
+            href={asset(`images/${event.flyer}`)}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`View the ${event.title} flyer in a new tab`}
           >
-            Google Calendar ↗
+            View Flyer
           </a>
+        ) : (
+          <>
+            {event.url && (
+              <a href={event.url} target="_blank" rel="noopener noreferrer">
+                {event.linkLabel}
+              </a>
+            )}
 
-          <button type="button" onClick={() => downloadEvent(event)}>
-            Apple / Outlook ↓
-          </button>
-        </div>
+            <div className="calendar-event__actions">
+              <a
+                href={googleLink(event)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google Calendar
+              </a>
+
+              <button type="button" onClick={() => downloadEvent(event)}>
+                Apple / Outlook
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </details>
   );
@@ -227,9 +285,10 @@ export default function EventsCalendar() {
           <p className="eyebrow">Around Indian Valley</p>
           <h1>November 2026</h1>
           <p>Community gatherings & seasonal traditions.</p>
-          <span className="events-hint">
-            Select an event to explore details and add it to your calendar.
-          </span>
+       <span className="events-hint">
+  Select an event to see details, view a flyer, or add it to your calendar
+  where available.
+</span>
         </header>
 
         <div className="month-calendar">

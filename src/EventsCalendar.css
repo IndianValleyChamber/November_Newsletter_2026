@@ -177,3 +177,48 @@
     font-size: 13px;
   }
 }
+
+.events-heading > .eyebrow,
+.events-hint,
+.month-calendar__weekday {
+  font-size: 14px;
+}
+
+.events-heading > p:not(.eyebrow) {
+  font-size: 18px;
+}
+
+.month-calendar__day > time,
+.events-mobile__day > time,
+.calendar-event__body,
+.events-looking-ahead p,
+.events-looking-ahead a {
+  font-size: 16px;
+}
+
+.calendar-event summary {
+  font-size: 16px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.navbar__link[href="#newsletter"] {
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .events-mobile summary {
+    font-size: 18px;
+  }
+
+  .events-mobile .calendar-event__body {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar__link[href="#newsletter"] {
+    max-width: 9rem;
+    font-size: 15px;
+  }
+}
