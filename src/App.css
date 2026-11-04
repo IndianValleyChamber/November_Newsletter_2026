@@ -1642,3 +1642,270 @@ main video {
   overflow-wrap: anywhere;
   text-underline-offset: 4px;
 }
+
+/* Keep the existing paragraph/sidebar relationship above the gallery. */
+.christmas-feature {
+  margin-bottom: clamp(40px, 5vw, 76px);
+}
+
+.christmas-feature__gallery {
+  margin: 0;
+}
+
+.christmas-feature__images {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 2vw, 28px);
+}
+
+.christmas-feature__images img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  box-shadow:
+    0 4px 12px rgb(47 43 35 / 7%),
+    0 18px 40px rgb(47 43 35 / 12%);
+}
+
+.christmas-feature__gallery figcaption {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .christmas-feature__images {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .christmas-feature__images {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+}
+
+.alyssa-contact {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.alyssa-contact > span {
+  line-height: 44px;
+}
+
+.alyssa-contact summary {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.alyssa-contact summary::-webkit-details-marker {
+  display: none;
+}
+
+.alyssa-contact summary svg {
+  width: 21px;
+  height: 21px;
+}
+
+.alyssa-contact summary:hover {
+  opacity: 0.6;
+}
+
+.alyssa-contact summary:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 2px;
+}
+
+.alyssa-contact details a {
+  display: block;
+  margin-top: 4px;
+  text-underline-offset: 4px;
+}
+
+.veterans-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  align-items: start;
+  column-gap: clamp(32px, 5vw, 80px);
+  margin-block: clamp(48px, 6vw, 88px);
+}
+
+.veterans-feature__copy {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.veterans-feature__copy p {
+  margin: 0;
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.85;
+}
+
+.veterans-feature__image {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+  margin: 48px 0 0;
+}
+
+.veterans-feature__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow:
+    0 4px 12px rgb(47 43 35 / 7%),
+    0 18px 40px rgb(47 43 35 / 12%);
+}
+
+.veterans-feature__image figcaption {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .veterans-feature {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .veterans-feature__copy {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .veterans-feature__image {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+  }
+}
+
+@media (min-width: 761px) {
+  .veterans-feature {
+    align-items: center;
+  }
+
+  .veterans-feature__image {
+    margin-top: 0;
+  }
+}
+
+.navbar__issue {
+  font-size: clamp(16px, 1.2vw, 19px);
+  line-height: 1.5;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2vw, 32px);
+}
+
+.navbar__calendar {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: none;
+  text-underline-offset: 5px;
+}
+
+.navbar__calendar:hover,
+.navbar__calendar:focus-visible,
+.navbar__issue:hover {
+  text-decoration: underline;
+}
+
+.navbar__membership {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid #302823;
+  background: #302823;
+  color: #fefefc;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 180ms ease;
+}
+
+.navbar__membership:hover {
+  background: #483c34;
+}
+
+.navbar__actions a:focus-visible,
+.navbar__issue:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+/* Give the links their own row before the navbar gets crowded. */
+@media (max-width: 1100px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar__actions {
+    flex-basis: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar__issue {
+    max-width: 155px;
+    font-size: 16px;
+    text-align: right;
+  }
+
+  .navbar__actions {
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .navbar__calendar {
+    font-size: 15px;
+  }
+
+  .navbar__membership {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar__membership {
+    transition: none;
+  }
+}
+
+.navbar__membership,
+.navbar__membership:hover,
+.navbar__membership:focus-visible {
+  background: transparent;
+  border-color: #302823;
+  color: #302823;
+}

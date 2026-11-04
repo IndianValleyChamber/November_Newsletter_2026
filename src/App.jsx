@@ -258,12 +258,24 @@ useEffect(() => {
           </span>
         </a>
 
-        <a className="navbar__link" href="#journal">
-          November 2026 Newsletter
-        </a>
-        <a className="journal-link" href="#calendar">
-  Calendar of Events ↗
+<a className="navbar__issue" href="#newsletter">
+  November 2026 Newsletter
 </a>
+
+<div className="navbar__actions">
+  <a className="navbar__calendar" href="#calendar">
+    Calendar of Events ↗
+  </a>
+
+  <a
+    className="navbar__membership"
+    href="https://www.zeffy.com/en-US/ticketing/indian-valley-chamber-of-commerces-memberships"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Become a Member ↗
+  </a>
+</div>
       </header>
 
       <main id="journal">
@@ -504,36 +516,104 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
   />
 </section>
 
-          <section className="editorial-row journal-width">
-            <div className="editorial-row__copy">
-              <p>
-                Soon, there will be another reason to stay. Christmas in
-                Crescent, a newer tradition finding its place among our
-                familiar celebrations, is returning for another season.
-                Planning is underway for this year’s gathering.
-              </p>
-            </div>
-<Sidebar title="Christmas in Crescent Vendors">
-  <p>
-    Chamber members interested in a vendor space are
-    invited to text Alyssa Dobbins.
-  </p>
+    <section className="christmas-feature journal-width">
+  <div className="editorial-row">
+    <div className="editorial-row__copy">
+      <p>
+        Soon, there will be another reason to stay. Christmas in
+        Crescent, a newer tradition finding its place among our
+        familiar celebrations, is returning for another season.
+        Planning is underway for this year’s gathering.
+      </p>
+    </div>
 
-  <a className="journal-link" href="sms:+15302498941">
-    Text Alyssa · (530) 249-8941 ↗
-  </a>
-</Sidebar>
-          </section>
+    <Sidebar title="Christmas in Crescent Vendors">
+      <p>
+        Chamber members interested in a vendor space are
+        invited to text Alyssa Dobbins.
+      </p>
 
-          <div className="article-copy opening">
-            <p>
-              Other traditions need little introduction. For many in
-              Indian Valley, November 11 means heading to downtown
-              Greenville, greeting familiar faces, and gathering to honor
-              those who have served. This year’s Veterans Day Parade
-              begins at 11 AM on Wednesday, November 11, 2026.
-            </p>
-          </div>
+      <div className="parade-contact">
+        <div className="parade-contact__options">
+<div className="alyssa-contact">
+  <span>Text Alyssa</span>
+
+  <details>
+    <summary aria-label="Show Alyssa’s phone number">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <path d="m7 3 3 5-2 2a15 15 0 0 0 6 6l2-2 5 3-1 4C10 22 2 14 3 4Z" />
+      </svg>
+    </summary>
+
+    <a href="sms:+15302498941">
+      (530) 249-8941
+    </a>
+  </details>
+</div>
+        </div>
+      </div>
+    </Sidebar>
+  </div>
+
+  <figure className="christmas-feature__gallery">
+    <div className="christmas-feature__images">
+      <img
+        src={asset("images/christmas_in_crescent1.jpg")}
+        alt="Christmas in Crescent festivities in 2025"
+        loading="lazy"
+        decoding="async"
+      />
+
+      <img
+        src={asset("images/christmasInCrescent2.jpg")}
+        alt="Another scene from Christmas in Crescent 2025"
+        loading="lazy"
+        decoding="async"
+      />
+
+      <img
+        src={asset("images/christmasInCrescent3.jpg")}
+        alt="Christmas in Crescent celebration in 2025"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+
+    <figcaption>Christmas in Crescent 2025</figcaption>
+  </figure>
+</section>
+<section className="veterans-feature journal-width">
+  <div className="veterans-feature__copy">
+    <p>
+      Other traditions need little introduction. For many in
+      Indian Valley, November 11 means heading to downtown
+      Greenville, greeting familiar faces, and gathering to
+      honor those who have served. This year’s Veterans Day
+      Parade begins at 11 AM on Wednesday, November 11, 2026.
+    </p>
+  </div>
+
+  <figure className="veterans-feature__image">
+    <img
+      src={asset("images/veterans.png")}
+      alt="Veterans carrying flags at a local parade"
+      loading="lazy"
+      decoding="async"
+    />
+
+    <figcaption>
+      Veterans carrying the colors at a local parade.
+    </figcaption>
+  </figure>
+</section>
 
           <section className="editorial-row journal-width">
   <div className="editorial-row__copy">
