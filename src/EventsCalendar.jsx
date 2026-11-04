@@ -263,7 +263,7 @@ export default function EventsCalendar() {
   return (
     <>
       <header className="navbar">
-        <a className="navbar__brand" href="#newsletter">
+        <a className="navbar__brand" href="https://indianvalleychamber.org/">
           <img
             className="navbar__heron"
             src={asset("images/Charcoal Heron Engraving in Flight.png")}
