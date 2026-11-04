@@ -452,6 +452,7 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
       loading="lazy"
       decoding="async"
     />
+    <figcaption>The rebuilt Greenville Cy Hall Memorial Museum</figcaption>
   </figure>
 </section>
 
@@ -471,7 +472,7 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
       alt="The Waystation exterior in Greenville"
       loading="lazy"
       decoding="async"
-    />
+    /><figcaption>The Waystation</figcaption>
   </figure>
 </section>
 
@@ -481,6 +482,7 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
       src={media.hotelOutside}
       alt="The exterior of The Crescent Hotel in Crescent Mills"
     />
+    <figcaption>Moon Deck at Night</figcaption>
 
     <div className="hotel-feature__copy">
       <p>
@@ -503,6 +505,7 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
     src={media.hotelRoom}
     alt="A newly remodeled guest room at The Crescent Hotel"
   />
+
 </section>
 
     <section className="christmas-feature journal-width">

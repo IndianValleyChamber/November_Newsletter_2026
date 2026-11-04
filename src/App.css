@@ -2127,3 +2127,31 @@ main video {
     margin: 0;
   }
 }
+
+@media (min-width: 1100px) {
+  .waystation-feature__image {
+    width: min(90%, 600px);
+    justify-self: end;
+  }
+}
+
+.waystation-feature__image figcaption,
+.cy-hall-feature__second figcaption {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.hotel-feature__photo {
+  margin: 0;
+}
+
+.hotel-feature__photo figcaption {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
