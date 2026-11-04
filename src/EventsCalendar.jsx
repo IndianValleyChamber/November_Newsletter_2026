@@ -18,13 +18,6 @@ const ivrpdClasses = [
     flyer: "seniors-yoga.png",
   },
   {
-    id: "daddy-daughter-dance",
-    days: [5, 12, 19],
-    title: "Daddy Daughter Dance",
-    time: "11:15–11:45 AM",
-    flyer: "daddy-daughter-dance.jpg",
-  },
-  {
     id: "cheerleading",
     days: [5, 12, 19],
     title: "Cheerleading Skills",
