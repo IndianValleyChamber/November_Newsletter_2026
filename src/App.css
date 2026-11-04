@@ -1915,6 +1915,25 @@ main video {
   gap: clamp(28px, 6vw, 88px);
 }
 
+.navbar__membership {
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.navbar__membership:hover,
+.navbar__membership:focus-visible {
+  background-color: #f0ecea;
+  color: #302823;
+}
+
+.navbar__actions .navbar__membership:focus-visible {
+  outline-color: #302823;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar__membership {
+    transition: none;
+  }
+}
 .shoppe-feature__lead {
   align-items: center;
 }
