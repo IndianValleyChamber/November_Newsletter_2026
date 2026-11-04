@@ -7,6 +7,7 @@ const collections = {
   videos: [
     "images/genesee_video1.mov",
     "images/genesee_video2.mov",
+    "images/genesee_video3.mov",
   ],
   photos: [
     "images/genesee_farms1.jpeg",
