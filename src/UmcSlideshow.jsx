@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import VideoLoadingFrame from "./VideoLoadingFrame";
 
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
@@ -43,7 +44,10 @@ export default function UmcSlideshow() {
 
   return (
     <figure className="umc-slideshow">
-      <div className="umc-slideshow__frame">
+      <VideoLoadingFrame
+        className="umc-slideshow__frame"
+        activeIndex={active}
+      >
         {clips.map((src, index) => (
           <video
             key={src}
@@ -73,7 +77,7 @@ export default function UmcSlideshow() {
             }}
           />
         ))}
-      </div>
+      </VideoLoadingFrame>
 
       <figcaption>UMC’s Fall into Greenville</figcaption>
     </figure>

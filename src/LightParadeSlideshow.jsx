@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import VideoLoadingFrame from "./VideoLoadingFrame";
 
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
@@ -42,7 +43,10 @@ export default function LightParadeSlideshow() {
 
   return (
     <figure className="light-parade-film">
-      <div className="light-parade-film__frame">
+      <VideoLoadingFrame
+        className="light-parade-film__frame"
+        activeIndex={active}
+      >
         {clips.map((src, index) => (
           <video
             key={src}
@@ -67,7 +71,7 @@ export default function LightParadeSlideshow() {
             }}
           />
         ))}
-      </div>
+      </VideoLoadingFrame>
 
       <figcaption>Taylorsville Light Parade 2025</figcaption>
     </figure>
