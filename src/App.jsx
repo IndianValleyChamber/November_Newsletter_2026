@@ -614,33 +614,35 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
 </section>
 
           <section className="editorial-row journal-width">
-  <div className="editorial-row__copy">
-    <p>
-      Our community suppers have been a bright spot in the
-      changing landscape of life since the Dixie Fire.
-    </p>
+<div className="editorial-row__copy">
+  <h2 className="journal-section-title">
+    Holiday Dinner at the Indian Valley Museum
+  </h2>
+  <p>
+    The Indian Valley Museum hosts its Holiday Dinner on Monday,
+    November 9, from 5:30 to 8:30 PM. The evening includes a turkey
+    dinner and time to visit in the museum’s Community Room in
+    Taylorsville.
+  </p>
 
-    <p>
-      The Indian Valley Museum’s Holiday Dinner is Monday,
-      November 9, from 5:30 to 8:30 PM—a turkey dinner and
-      visiting in the museum’s Community Room in Taylorsville.
-    </p>
-
-    <p>
-      On Monday, November 16, the Indian Valley Riding and
-      Roping Club will provide a Thanksgiving dinner at Historic
-      Taylorsville Hall for the November Community Supper.
-      Everyone is welcome from 5 to 6:30 PM.
-    </p>
-
-    <p>
-      In Greenville, the Community Thanksgiving Dinner will
-      take place on Thursday, November 26, from 11 AM to 3 PM
-      at The Legion. The meal is free and open to everyone,
-      with delivery available for those physically unable
-      to attend.
-    </p>
-  </div>
+  <h2 className="journal-section-title">Community Suppers</h2>
+  <p>
+    Our community suppers have been a bright spot in the
+    changing landscape of life since the Dixie Fire.
+  </p>
+  <p>
+    On Monday, November 16, the Indian Valley Riding and Roping
+    Club will serve Thanksgiving dinner at Historic Taylorsville
+    Hall for the November Community Supper. Everyone is welcome
+    from 5 to 6:30 PM.
+  </p>
+  <p>
+    In Greenville, the Community Thanksgiving Dinner will take
+    place on Thursday, November 26, from 11 AM to 3 PM at The
+    Legion. The meal is free and open to everyone, with delivery
+    available for those physically unable to attend.
+  </p>
+</div>
 
   <div className="sidebar-stack">
 <Sidebar title="Greenville Dinner: Delivery & Donations">
