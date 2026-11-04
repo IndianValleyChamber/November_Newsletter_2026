@@ -281,15 +281,25 @@ export default function EventsCalendar() {
       </header>
 
       <main className="events-page">
-        <header className="events-heading">
-          <p className="eyebrow">Around Indian Valley</p>
-          <h1>November 2026</h1>
-          <p>Community gatherings & seasonal traditions.</p>
-       <span className="events-hint">
-  Select an event to see details, view a flyer, or add it to your calendar
-  where available.
-</span>
-        </header>
+     <div className="events-intro">
+  <header className="events-heading">
+    <p className="eyebrow">Around Indian Valley</p>
+    <h1>November 2026</h1>
+    <p>Community gatherings &amp; seasonal traditions.</p>
+    <span className="events-hint">
+      Select an event to see details, view a flyer, or add it to your
+      calendar where available.
+    </span>
+  </header>
+
+  <img
+    className="events-intro__photo"
+    src={asset("images/fall.jpg")}
+    alt="Autumn in Indian Valley"
+    width={180}
+    height={220}
+  />
+</div>
 
         <div className="month-calendar">
           {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (

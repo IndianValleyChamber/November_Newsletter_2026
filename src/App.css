@@ -2559,3 +2559,17 @@ main video {
     transform: translateY(140px) scale(1.55);
   }
 }
+.shoppe-feature__lead .shoppe-reel {
+  width: min(100%, 340px);
+  justify-self: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.shoppe-feature__lead .shoppe-reel__video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 340 / 606;
+  margin-inline: auto;
+}

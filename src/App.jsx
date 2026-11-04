@@ -855,9 +855,9 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
       <iframe
         className="shoppe-reel__video"
         title="A look at the Artisan Shoppe"
-        src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1561939162401767%2F&show_text=false&width=267&t=0"
-        width={267}
-        height={476}
+      src="https://www.facebook.com/plugins/video.php?height=606&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1561939162401767%2F&show_text=false&width=340&t=0"
+width={340}
+height={606}
         loading="lazy"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         allowFullScreen
