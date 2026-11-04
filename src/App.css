@@ -2300,3 +2300,17 @@ main video {
 .ivrpd-flyers__controls button:hover {
   background: rgb(254 254 252 / 12%);
 }
+.editorial-row__copy .crescent-save-the-date {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.crescent-save-the-date > span {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

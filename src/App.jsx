@@ -523,6 +523,11 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
         familiar celebrations, is returning for another season.
         Planning is underway for this year’s gathering.
       </p>
+      <p className="crescent-save-the-date">
+  <span>Looking ahead</span>
+  <time dateTime="2026-12-13">Sunday, December 13, 2026</time>
+  {" · 2–8 PM · Crescent Mills"}
+</p>
     </div>
 
     <Sidebar title="Christmas in Crescent Vendors">
