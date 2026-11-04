@@ -1096,9 +1096,9 @@ Nature, whimsy, and a little magic come together at All the Rage: light-up mushr
   </h2>
 
   <p>
-    More events are in the works. Follow the Chamber on Facebook
-    and Instagram for new announcements and details as plans come
-    together.
+This fall, visitors stepped inside the rebuilt museum in Greenville, and kids in Taylorsville made the rounds at Trunk-or-Treat and went door to door. As we head into winter, there are more chances to get together, from the Artisan Shoppe in its new home to the Light Parade in Taylorsville.
+
+Follow the Chamber on Facebook and Instagram for updates as more plans come together.
   </p>
 
   <SocialLinks />
@@ -1125,7 +1125,6 @@ Nature, whimsy, and a little magic come together at All the Rage: light-up mushr
           </div>
         )}
 
-        <SocialLinks />
 
         <a href="mailto:chamberofcommerceiv@gmail.com">
           chamberofcommerceiv@gmail.com
