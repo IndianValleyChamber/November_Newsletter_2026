@@ -345,7 +345,7 @@ export default function EventsCalendar() {
           <h2>Christmas in Crescent</h2>
           <p>December 13, 2026 · 2–8 PM · Crescent Mills</p>
           <a href="sms:+15302498941">
-            Vendor inquiries: text Alyssa Dobbins ↗
+            Vendor inquiries: text Alyssa ↗
           </a>
         </aside>
       </main>
