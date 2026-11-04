@@ -702,11 +702,6 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
                   vendors may be selected the week before opening,
                   depending on available space.
                 </p>
-                <p>
-                  Artisans can also request a spot at Christmas in
-                  Crescent—a separate event with different dates and a
-                  different location. Indicate your interest when applying.
-                </p>
                 <OptionalLink href={links.overflow}>
                   Apply for Overflow Space ↗
                 </OptionalLink>
