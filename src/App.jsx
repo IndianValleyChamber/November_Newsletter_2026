@@ -292,7 +292,7 @@ useEffect(() => {
 
             <div className="journal-hero__content">
               <time className="journal-hero__date" dateTime="2026-11-04">
-                November 4, 2026
+                November 5, 2026
               </time>
 
               <h1>The familiar, taking new form.</h1>
