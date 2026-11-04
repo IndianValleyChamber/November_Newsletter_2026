@@ -938,13 +938,88 @@ Nature, whimsy, and a little magic come together at All the Rage: light-up mushr
 </p>
 
 <p>
-  For more local classes, workshops, and community gatherings, visit
-  the district’s events page.
+  The district has more coming up, including{" "}
+  <button
+    type="button"
+    className="ivrpd-flyer-link"
+    aria-haspopup="dialog"
+    aria-controls="ivrpd-flyers"
+    onClick={() => document.getElementById("ivrpd-flyers").showModal()}
+  >
+    yoga and other November classes
+  </button>
+  . We’ve included a few classes starting this month. For sessions already
+  underway and other events, check the district’s website.
 </p>
 
 <OptionalLink href="https://ivrpd.org/events/">
-  Browse IVRPD Events ↗
+  Browse IVRPD Events
 </OptionalLink>
+
+<dialog
+  id="ivrpd-flyers"
+  className="ivrpd-flyers"
+  aria-labelledby="ivrpd-flyers-title"
+>
+  <div className="ivrpd-flyers__header">
+    <h2 id="ivrpd-flyers-title">November Classes from IVRPD</h2>
+    <form method="dialog">
+      <button type="submit" aria-label="Close November flyers">
+        Close
+      </button>
+    </form>
+  </div>
+
+
+
+  <ul id="ivrpd-flyer-row" className="ivrpd-flyers__row">
+    {[
+      ["adult-yoga.png", "Adult Yoga"],
+      ["seniors-yoga.png", "Serenity Seniors Yoga"],
+      ["daddy-daughter-dance.jpg", "Daddy Daughter Dance"],
+      ["cheerleading.png", "Cheerleading Skills"],
+      ["fall-ceramic-painting.png", "Fall Ceramic Painting"],
+    ].map(([file, title]) => (
+      <li key={file}>
+        <a
+          href={asset(`images/${file}`)}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open the full-size ${title} flyer in a new tab`}
+        >
+          <img
+           src={asset(`images/${file}`)}
+            alt={`${title} flyer`}
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+      </li>
+    ))}
+  </ul>
+    <div className="ivrpd-flyers__controls">
+    <button
+      type="button"
+      aria-label="Scroll flyers left"
+      aria-controls="ivrpd-flyer-row"
+      onClick={() =>
+        document.getElementById("ivrpd-flyer-row").scrollBy({ left: -320 })
+      }
+    >
+      ‹
+    </button>
+    <button
+      type="button"
+      aria-label="Scroll flyers right"
+      aria-controls="ivrpd-flyer-row"
+      onClick={() =>
+        document.getElementById("ivrpd-flyer-row").scrollBy({ left: 320 })
+      }
+    >
+      ›
+    </button>
+  </div>
+</dialog>
 
 </section>
 <figure className="halloween-gallery journal-width">

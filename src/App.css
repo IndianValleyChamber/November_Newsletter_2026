@@ -2155,3 +2155,131 @@ main video {
   line-height: 1.6;
   text-align: center;
 }
+
+.ivrpd-flyer-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.ivrpd-flyers {
+  box-sizing: border-box;
+  width: min(1400px, calc(100% - 32px));
+  max-width: none;
+  max-height: 92dvh;
+  padding: clamp(16px, 3vw, 36px);
+  border: 1px solid rgb(254 254 252 / 25%);
+  background: #302823;
+  color: #fefefc;
+  overflow: auto;
+}
+
+.ivrpd-flyers::backdrop {
+  background: #302823;
+}
+
+.ivrpd-flyers__header,
+.ivrpd-flyers__controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ivrpd-flyers__header {
+  justify-content: space-between;
+}
+
+.ivrpd-flyers__header h2 {
+  margin: 0;
+  font-family: "Bodoni Moda SC", serif;
+  font-size: clamp(22px, 3vw, 36px);
+  font-weight: 400;
+}
+
+.ivrpd-flyers__controls {
+  justify-content: flex-end;
+  margin-block: 12px;
+}
+
+.ivrpd-flyers button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 6px 12px;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.ivrpd-flyers__controls button {
+  font-size: 24px;
+}
+
+.ivrpd-flyers__row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(240px, 28vw, 300px);
+  gap: 20px;
+  margin: 20px 0 0;
+  padding: 4px 4px 16px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  list-style: none;
+}
+
+.ivrpd-flyers__row li {
+  scroll-snap-align: start;
+}
+
+.ivrpd-flyers__row a,
+.ivrpd-flyers__row img {
+  display: block;
+}
+
+.ivrpd-flyers__row img {
+  width: 100%;
+  height: auto;
+}
+
+.ivrpd-flyers :focus-visible {
+  outline: 2px solid #fefefc;
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .ivrpd-flyers__controls {
+    display: none;
+  }
+
+  .ivrpd-flyers__row {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: minmax(0, 1fr);
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+}
+.ivrpd-flyers__row {
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+
+.ivrpd-flyers__row::-webkit-scrollbar {
+  display: none;
+}
+
+.ivrpd-flyers__controls {
+  justify-content: center;
+  margin: 18px 0 0;
+}
+
+.ivrpd-flyers__controls button:hover {
+  background: rgb(254 254 252 / 12%);
+}
