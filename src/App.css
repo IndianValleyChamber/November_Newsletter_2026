@@ -2546,3 +2546,16 @@ main video {
     margin-inline: auto;
   }
 }
+
+@media (min-width: 1280px) {
+  .cy-hall-feature .cy-hall-feature__second {
+    transform: translateY(160px) scale(1.3);
+    transform-origin: top left;
+  }
+}
+
+@media (min-width: 1440px) {
+  .cy-hall-feature .cy-hall-feature__second {
+    transform: translateY(140px) scale(1.55);
+  }
+}
