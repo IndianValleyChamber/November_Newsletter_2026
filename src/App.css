@@ -2144,12 +2144,20 @@ main video {
     margin: 0;
   }
 }
-
 @media (min-width: 1100px) {
-  .waystation-feature__image {
-    width: min(90%, 600px);
-    justify-self: end;
+  .waystation-feature {
+    grid-template-columns: minmax(0, min(50%, 600px)) minmax(0, 1fr);
   }
+
+  .waystation-feature__image {
+    width: 100%;
+    justify-self: start;
+  }
+
+.waystation-feature__copy p {
+  max-width: 28ch;
+  margin-inline: auto;
+}
 }
 
 .waystation-feature__image figcaption,
