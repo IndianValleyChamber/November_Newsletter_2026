@@ -501,10 +501,14 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
     </Sidebar>
   </div>
 
-  <Media
-    src={media.hotelRoom}
-    alt="A newly remodeled guest room at The Crescent Hotel"
-  />
+  <figure className="hotel-feature__photo">
+    <Media
+      src={media.hotelRoom}
+      alt="A newly remodeled guest room at The Crescent Hotel"
+    />
+    <figcaption>Room in the newly remodeled Crescent Hotel</figcaption>
+  </figure>
+
 
 </section>
 
