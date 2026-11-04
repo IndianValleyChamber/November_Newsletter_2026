@@ -535,52 +535,62 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
           </div>
 
           <section className="editorial-row journal-width">
-            <div className="editorial-row__copy">
-              <p>
-                Our community suppers have been a bright spot in the
-                changing landscape of life since the Dixie Fire.
-              </p>
-              <p>
-                On Monday, November 16, the Indian Valley Riding and
-                Roping Club will provide a Thanksgiving dinner at Historic
-                Taylorsville Hall for the November Community Supper.
-                Everyone is welcome from 5 to 6:30 PM.
-              </p>
-              <p>
-                In Greenville, the Community Thanksgiving Dinner will
-                take place on Thursday, November 26, from 11 AM to 3 PM
-                at The Legion. The meal is free and open to everyone.
-              </p>
-            </div>
-            <div className="sidebar-stack">
-              <Sidebar title="A Thanksgiving Meal for Everyone">
-                <p>
-                  Meal delivery is available for people physically
-                  unable to attend the Greenville dinner. Sign yourself
-                  or someone you know up by November 15.
-                </p>
-                <p>
-                  Volunteers and donations of baked goods are welcome.
-                  A donation box is now available at The Crescent Store.
-                </p>
-                <OptionalLink href={links.thanksgiving}>
-                  Meal Delivery & Volunteer Signup ↗
-                </OptionalLink>
-              </Sidebar>
+  <div className="editorial-row__copy">
+    <p>
+      Our community suppers have been a bright spot in the
+      changing landscape of life since the Dixie Fire.
+    </p>
 
-              <Sidebar title="Also at the Museum">
-                <p>
-                  Indian Valley Museum Holiday Dinner
-                  <br />
-                  November 9 · 5:30–8:30 PM
-                </p>
-                <p>
-                  Turkey dinner and visiting in the museum’s Community
-                  Room in Taylorsville.
-                </p>
-              </Sidebar>
-            </div>
-          </section>
+    <p>
+      The Indian Valley Museum’s Holiday Dinner is Monday,
+      November 9, from 5:30 to 8:30 PM—a turkey dinner and
+      visiting in the museum’s Community Room in Taylorsville.
+    </p>
+
+    <p>
+      On Monday, November 16, the Indian Valley Riding and
+      Roping Club will provide a Thanksgiving dinner at Historic
+      Taylorsville Hall for the November Community Supper.
+      Everyone is welcome from 5 to 6:30 PM.
+    </p>
+
+    <p>
+      In Greenville, the Community Thanksgiving Dinner will
+      take place on Thursday, November 26, from 11 AM to 3 PM
+      at The Legion. The meal is free and open to everyone,
+      with delivery available for those physically unable
+      to attend.
+    </p>
+  </div>
+
+  <div className="sidebar-stack">
+<Sidebar title="Greenville Dinner: Delivery & Donations">
+  <p>
+    Meal delivery is available for people physically unable
+    to attend the Greenville Community Thanksgiving Dinner.
+    Sign yourself or someone you know up by November 15.
+  </p>
+
+  <p>
+    Volunteers and donations of baked goods are welcome.
+    To help support the meal, look for the donation box
+    at The Crescent Store.
+  </p>
+
+  <p>
+    For more information about meal delivery, volunteering,
+    or donating, contact{" "}
+    <a
+      href="https://www.facebook.com/karen.morcomb"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Karen Morcomb on Facebook ↗
+    </a>.
+  </p>
+</Sidebar>
+  </div>
+</section>
 
           <section className="editorial-row journal-width">
             <div className="editorial-row__copy">
