@@ -1118,32 +1118,51 @@ Nature, whimsy, and a little magic come together at All the Rage: light-up mushr
 </section>
 <figure className="halloween-gallery journal-width">
   <div className="halloween-gallery__grid">
-    <video
-      src={asset("images/trickTreatVideo.mov")}
-      aria-label="A short clip of trick-or-treating in Taylorsville"
-      muted
-      playsInline
-      preload="metadata"
-      ref={(video) => {
-        if (!video) return;
+<video
+  src={asset("images/Tricktreat.mp4")}
+  aria-label="A short clip of trick-or-treating in Taylorsville"
+  muted
+  playsInline
+  preload="metadata"
+  ref={(video) => {
+    if (!video) return;
 
-        const observer = new IntersectionObserver(
-          ([entry]) => {
-            if (!entry.isIntersecting) return;
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    );
+    let replayTimer;
 
-            if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-              video.play().catch(() => {});
-            }
+    function playClip() {
+      if (!reducedMotion.matches) {
+        video.play().catch(() => {});
+      }
+    }
 
-            observer.disconnect();
-          },
-          { threshold: 0.5 }
-        );
+    function scheduleReplay() {
+      window.clearTimeout(replayTimer);
+      replayTimer = window.setTimeout(playClip, 4000);
+    }
 
-        observer.observe(video);
-        return () => observer.disconnect();
-      }}
-    />
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+
+        playClip();
+        observer.disconnect();
+      },
+      { threshold: 0.5 }
+    );
+
+    video.addEventListener("ended", scheduleReplay);
+    observer.observe(video);
+
+    return () => {
+      observer.disconnect();
+      video.removeEventListener("ended", scheduleReplay);
+      window.clearTimeout(replayTimer);
+    };
+  }}
+/>
     <img
       src={asset("images/trunk_treat_bus.jpg")}
       alt="Decorated bus at Taylorsville’s Trunk-or-Treat"
