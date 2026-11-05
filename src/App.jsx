@@ -19,8 +19,8 @@ const media = {
   allTheRage: "images/jamie_rainbow.png",
   gemstoneGenie: "images/gemstone_geenie.jpg",
   chamberLogo: "images/chamber_round_logo.png",  
-  hotelOutside: "images/crescent_hotel_outside.jpeg",
-hotelRoom: "images/room_at_crescent_hotel.jpeg",
+  hotelOutside: "images/crescent_hotel_outside.jpg",
+hotelRoom: "images/room_at_crescent_hotel.jpg",
 };
 
 const links = {
@@ -362,7 +362,7 @@ useEffect(() => {
             <figure className="journal-hero__figure">
   <img
     className="journal-hero__image"
-    src={asset("images/fall_colors.jpeg")}
+    src={asset("images/indianFalls.jpg")}
     alt="Autumn colors at Indian Falls, Plumas County, California"
     fetchPriority="high"
   />
@@ -511,7 +511,7 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
   <div className="cy-hall-feature__top">
     <figure className="cy-hall-feature__first">
       <img
-        src={asset("images/cyHall1.jpeg")}
+        src={asset("images/cyHall1.jpg")}
         alt="Greenville Cy Hall Memorial Museum"
         loading="lazy"
         decoding="async"
@@ -532,7 +532,7 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
 
   <figure className="cy-hall-feature__second">
     <img
-      src={asset("images/cyMuseumGreenville.jpeg")}
+      src={asset("images/museumGreenville.jpg")}
       alt="A view of the Greenville Cy Hall Memorial Museum"
       loading="lazy"
       decoding="async"
@@ -553,7 +553,7 @@ As autumn brings fresh color to Indian Valley, our community calendar reflects c
 
   <figure className="waystation-feature__image">
     <img
-      src={asset("images/waystation.jpeg")}
+      src={asset("images/waystation.jpg")}
       alt="The Waystation exterior in Greenville"
       loading="lazy"
       decoding="async"
