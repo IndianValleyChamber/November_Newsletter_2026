@@ -4,8 +4,8 @@ import VideoLoadingFrame from "./VideoLoadingFrame";
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 const clips = [
-  "images/umc_1.mov",
-  "images/umc_2.mov",
+  "images/Umc1.mp4",
+  "images/Umc2.mp4",
 ];
 
 export default function UmcSlideshow() {
