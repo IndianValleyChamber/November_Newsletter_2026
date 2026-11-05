@@ -5,9 +5,9 @@ const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 const collections = {
   videos: [
-    "images/genesee_video1.mov",
-    "images/genesee_video2.mov",
-    "images/genesee_video3.mov",
+    "images/Farmsvideo1.mp4",
+    "images/Farmsvideo2.mp4",
+    "images/Farmsvideo3.mp4",
   ],
   photos: [
     "images/genesee_farms1.jpeg",
