@@ -85,7 +85,12 @@ export default function VideoLoadingFrame({
 
       {status && (
         <div className="video-loading-frame__veil">
-          <img src={heron} alt="" aria-hidden="true" />
+        <img
+  src={heron}
+  alt=""
+  aria-hidden="true"
+  data-video-loading-heron
+/>
           <span role="status">
             {status === "loading" ? "Loading video…" : "Video couldn’t start."}
           </span>

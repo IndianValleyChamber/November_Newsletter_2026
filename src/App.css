@@ -2573,3 +2573,21 @@ main video {
   aspect-ratio: 340 / 606;
   margin-inline: auto;
 }
+
+.light-parade-film__frame {
+  width: 56.25%;
+  aspect-ratio: 9 / 16;
+  margin-inline: auto;
+}
+
+.light-parade-film__frame .light-parade-film__video {
+  object-fit: cover;
+  object-position: center;
+}
+
+img[data-video-loading-heron],
+.light-parade-film__frame img[data-video-loading-heron] {
+  width: 32px;
+  max-width: 32px;
+  height: auto;
+}

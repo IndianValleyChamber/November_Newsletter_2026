@@ -4,8 +4,8 @@ import VideoLoadingFrame from "./VideoLoadingFrame";
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 const clips = [
-  "images/taylorsville_parade_1.mov",
-  "images/taylorsville_parade_2.mov",
+  "images/taylorsville_parade_1.mp4",
+  "images/taylorsville_parade_2.mp4",
 ];
 
 export default function LightParadeSlideshow() {
