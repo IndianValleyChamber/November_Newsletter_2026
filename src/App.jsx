@@ -207,27 +207,30 @@ useEffect(() => {
   return () => window.removeEventListener("hashchange", updatePage);
 }, []);
 
-  async function shareArticle() {
-    const shareData = {
-      title: "November 2026 | Indian Valley Chamber of Commerce",
-      url: window.location.href,
-    };
+async function shareArticle() {
+  const shareData = {
+    title: "November 2026 | Indian Valley Chamber of Commerce",
+    url: "https://indianvalleychamber.org/november-2026-newsletter/",
+  };
 
+  setShareMessage("");
+
+  if (navigator.share) {
     try {
-      if (navigator.share) {
-        await navigator.share(shareData);
-      } else if (navigator.clipboard?.writeText) {
-        await navigator.clipboard.writeText(shareData.url);
-        setShareMessage("Link copied");
-      } else {
-        setShareMessage("Copy this page’s address to share.");
-      }
+      await navigator.share(shareData);
+      return;
     } catch (error) {
-      if (error.name !== "AbortError") {
-        setShareMessage("Copy this page’s address to share.");
-      }
+      if (error.name === "AbortError") return;
     }
   }
+
+  try {
+    await navigator.clipboard.writeText(shareData.url);
+    setShareMessage("Newsletter link copied.");
+  } catch {
+    setShareMessage(`Copy this link to share: ${shareData.url}`);
+  }
+}
 
 
 
